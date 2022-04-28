@@ -1,5 +1,6 @@
 import React from "react";
 import HotelCard from './HotelCard'
+import './MyTrips.css'
 
 function MyTrips({hotelTrip}) {
 

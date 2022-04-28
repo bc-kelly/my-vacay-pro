@@ -1,3 +1,4 @@
-/* .trip-card .hotel-card {
-    outline: 1px solid black
-} */
+.trip-card {
+    outline: 2px dashed hotpink;
+    margin: 2%;
+}
