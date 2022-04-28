@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import HotelCard from './HotelCard'
 import {useParams} from "react-router-dom";
 
-function ShowHotel() {
+function ShowHotel({addHotelToTrip}) {
     const params = useParams();
 
     const hotelsAPI = '/hotels';
@@ -21,9 +21,8 @@ function ShowHotel() {
     return (
         <div> 
             hotel details:
-            <HotelCard hotel={hotel} />
+            <HotelCard hotel={hotel} addHotelToTrip={addHotelToTrip} />
         </div>
-
     )
 }
 

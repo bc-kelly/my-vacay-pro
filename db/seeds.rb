@@ -15,7 +15,7 @@ Profile.destroy_all
 
 puts "🌱 Creating accounts..."
 
-Account.create(account_name: "bridget", email:"bridget@gmail.com", password_digest: "bridget")
+Account.create(account_name: "bridget", email:"bridget@gmail.com", password: "bridget")
 
 
 puts "🌱 Creating profiles..."

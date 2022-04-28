@@ -56,7 +56,7 @@ function App() {
                 <Route path ="/accountsummary" element= { <AccountSummary /> } />
                 <Route path ="/profiles" element= { <Profiles profiles={profiles} /> } /> 
                 <Route path ="/mytrips" element= { <MyTrips hotels={hotels} hotelTrip={hotelTrip} /> } /> 
-                <Route path ="/showhotel/:id" element= { <ShowHotel /> } />
+                <Route path ="/showhotel/:id" element= { <ShowHotel addHotelToTrip={addHotelToTrip} /> } />
           </Routes>
     </div>
   );
