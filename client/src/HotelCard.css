@@ -1,0 +1,10 @@
+.hotel-card {
+    outline: 3px dotted green;
+    width: 80%;
+    margin: auto;
+}
+
+img{
+    min-width: 150px;
+    height: 100px;
+}

@@ -1,9 +1,11 @@
 import React from "react";
+import './Home.css';
+
 
 function Home() {
     return (
-        <div> 
-            hello from home
+        <div className="home" > 
+            Welcome to Vacation Pro
         </div>
 
     )

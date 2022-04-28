@@ -1,9 +1,14 @@
 import React from "react";
+import './AccountSummary.css';
+
 
 function AccountSummary() {
     return (
         <div> 
-            hello from account summary
+            <div> Points Summary: XXX </div>
+            <div className="account-summary" > 
+                An overview of your account:
+            </div>
         </div>
 
     )

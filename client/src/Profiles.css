@@ -1,0 +1,7 @@
+.profile {
+    display: flex;
+    margin: auto;
+    font-size: 1em;
+    padding: 0.5em 0.5em;
+    align-items: center
+}

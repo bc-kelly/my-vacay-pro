@@ -9,11 +9,16 @@ class ProfilesController < ApplicationController
       def show
         render json: @current_profile
       end
+
+      def index
+        profiles = Profile.all
+        render json: profiles, status: :ok
+    end
     
       private
     
       def profile_params
-        params.permit(:name, :image, )
+        params.permit(:name, :image )
       end
 
 end

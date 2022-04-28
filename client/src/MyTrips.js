@@ -1,9 +1,22 @@
 import React from "react";
+import HotelCard from './HotelCard'
 
-function MyTrips() {
+function MyTrips({hotelTrip}) {
+
+    const showAddedHotel = hotelTrip.map((addedHotel) => {
+        return (
+            <HotelCard 
+            key={addedHotel.id} 
+            hotel={addedHotel}
+            />
+        
+        )
+    })
+
     return (
-        <div> 
-            hello from my trips
+        <div className="trip-card" > 
+            {showAddedHotel}
+           
         </div>
 
     )
