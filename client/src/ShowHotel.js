@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import HotelCard from './HotelCard'
+import AddToMyTripsBtn from './AddToMyTripsBtn';
 import {useParams} from "react-router-dom";
+import './ShowHotel.css'
 
 function ShowHotel({addHotelToTrip}) {
     const params = useParams();
@@ -19,9 +21,10 @@ function ShowHotel({addHotelToTrip}) {
 
       if (!hotel) return null;
     return (
-        <div> 
+        <div className="show-hotel-card" > 
             hotel details:
-            <HotelCard hotel={hotel} addHotelToTrip={addHotelToTrip} />
+            <HotelCard hotel={hotel} />
+            <AddToMyTripsBtn hotel={hotel} addHotelToTrip={addHotelToTrip} />
         </div>
     )
 }

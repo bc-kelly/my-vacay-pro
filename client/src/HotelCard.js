@@ -1,21 +1,14 @@
 import React from "react";
 import './HotelCard.css';
 
-function HotelCard({hotel, addHotelToTrip}) {
-
+function HotelCard({hotel}) {
 
     return (
         <div className="hotel-card" > 
             <img src={hotel.image} alt={hotel.name}/>
             <h3> {hotel.name} </h3>
             <h3> {hotel.city_state} </h3>
-            <div> 
-            <button className='see-details' onClick={()=>addHotelToTrip(hotel)}> 
-                    add to my trips 
-                </button>
-            </div>
         </div>
-
     )
 }
 
