@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
 import Browse from "./Browse";
@@ -15,6 +15,7 @@ const profilesAPI = '/profiles';
 
 function App() {
 
+  let navigate = useNavigate();
   const [user, setUser] = useState(null);
   // console.log(`is ${setUser}`)
   const [hotels, setHotels] = useState([]);
@@ -58,10 +59,21 @@ function App() {
         }
     }
 
+    function handleLogoutClick() {
+        fetch("/logout", { method: "DELETE" }).then((r) => {
+          if (r.ok) {
+            setUser(null);
+            navigate("/");
+            console.log('logout success')
+          alert (`Goodbye`)
+          }
+        });
+      }
+
 
   return (
     <div className="App">
-     hello from app
+      <button onClick = {handleLogoutClick} > Logout </button>
      <NavBar />
           <Routes>
                 <Route exact path ="/" element= { <Home setUser={setUser} /> } /> 
