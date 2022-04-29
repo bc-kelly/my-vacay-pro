@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 
   post "/signup", to: "accounts#create"
+  get "/me", to: "accounts#show"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
 end

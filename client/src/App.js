@@ -7,6 +7,7 @@ import AccountSummary from "./AccountSummary";
 import Profiles from "./Profiles";
 import MyTrips from "./MyTrips";
 import ShowHotel from "./ShowHotel";
+import Login from "./Login";
 import './App.css';
 
 const hotelsAPI = '/hotels';
@@ -14,9 +15,21 @@ const profilesAPI = '/profiles';
 
 function App() {
 
+  const [user, setUser] = useState(null);
+  // console.log(`is ${setUser}`)
   const [hotels, setHotels] = useState([]);
   const [profiles, setProfiles] = useState([]);
   const [hotelTrip, setHotelTrip] = useState([]);
+
+  useEffect(() => {
+    // auto-login
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+        
+      }
+    });
+  }, []);
 
 
   useEffect(()=>{
@@ -51,12 +64,13 @@ function App() {
      hello from app
      <NavBar />
           <Routes>
-                <Route exact path ="/" element= { <Home /> } /> 
+                <Route exact path ="/" element= { <Home setUser={setUser} /> } /> 
                 <Route path ="/browse" element= { <Browse hotels={hotels} addHotelToTrip={addHotelToTrip} /> } /> 
                 <Route path ="/accountsummary" element= { <AccountSummary /> } />
                 <Route path ="/profiles" element= { <Profiles profiles={profiles} /> } /> 
                 <Route path ="/mytrips" element= { <MyTrips hotels={hotels} hotelTrip={hotelTrip} /> } /> 
                 <Route path ="/showhotel/:id" element= { <ShowHotel addHotelToTrip={addHotelToTrip} /> } />
+                <Route path ="/login" element= { <Login setUser={setUser} /> } />
           </Routes>
     </div>
   );
