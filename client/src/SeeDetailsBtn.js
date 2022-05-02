@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import './SeeDetailsBtn.css'
 
 function SeeDetailsBtn({hotels, hotel}) {
     
     return (
         <div> 
             <button className="see-details" > 
-                <a href={`http://localhost:4000/showhotel/${hotel.id}`}> see details </a> 
+                <Link to={`/showhotel/${hotel.id}`}> see details </Link>
             </button>
         </div>
     )

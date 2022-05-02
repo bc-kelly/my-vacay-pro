@@ -5,6 +5,7 @@
 } */
 
 img{
-    min-width: 150px;
-    height: 100px;
+    max-width: 25vh;
+    min-height: 25vh;
+    padding: 5px;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import './SeeDetailsBtn.css'
 
 
 function AddToMyTripsBtn({addHotelToTrip, hotel}) {

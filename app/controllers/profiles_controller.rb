@@ -7,18 +7,24 @@ class ProfilesController < ApplicationController
       end
     
       def show
-        render json: @current_profile
+        # render json: @current_profile
+        profile = Profile.find_by(id: session[:account_id])
+        if profile
+          render json: profile
+        else
+          render json: { error: "Not authorized" }, status: :unauthorized
+        end
       end
 
       def index
-        profiles = Profile.all
+        profiles = Profile.where(account_id: session[:account_id])
         render json: profiles, status: :ok
     end
     
       private
     
       def profile_params
-        params.permit(:name, :image )
+        params.permit(:name, :image, :account_id )
       end
 
 end

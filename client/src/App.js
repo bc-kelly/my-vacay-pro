@@ -8,6 +8,7 @@ import Profiles from "./Profiles";
 import MyTrips from "./MyTrips";
 import ShowHotel from "./ShowHotel";
 import Login from "./Login";
+import AddProfile from "./AddProfile";
 import './App.css';
 
 const hotelsAPI = '/hotels';
@@ -70,10 +71,10 @@ function App() {
         });
       }
 
-
+console.log(hotelTrip)
   return (
     <div className="App">
-      <button onClick = {handleLogoutClick} > Logout </button>
+      <button className="logout-btn" onClick = {handleLogoutClick} > Logout </button>
      <NavBar />
           <Routes>
                 <Route exact path ="/" element= { <Home setUser={setUser} /> } /> 
@@ -83,6 +84,7 @@ function App() {
                 <Route path ="/mytrips" element= { <MyTrips hotels={hotels} hotelTrip={hotelTrip} /> } /> 
                 <Route path ="/showhotel/:id" element= { <ShowHotel addHotelToTrip={addHotelToTrip} /> } />
                 <Route path ="/login" element= { <Login setUser={setUser} /> } />
+                <Route path ="/addprofile" element= { <AddProfile /> } />
           </Routes>
     </div>
   );

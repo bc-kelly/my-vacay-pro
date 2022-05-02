@@ -1,4 +1,12 @@
 .home {
     font-size: 2em;
     padding: 5%;
+    outline: 2px solid black;
+    margin: 2% auto;
+    max-width: 60%;
+    border-radius: 10px;
 }
+
+/* .login-text {
+    font-size: 1.5em;
+} */

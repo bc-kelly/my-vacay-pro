@@ -1,6 +1,7 @@
 import { useState } from "react";
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
+import './Login.css';
 
 
 function Login({ setUser }) {
@@ -13,9 +14,9 @@ function Login({ setUser }) {
         <>
           <LoginForm setUser={setUser} />
           <divider />
-          <p>
+          <p className="account" >
             Don't have an account? &nbsp;
-            <button color="secondary" onClick={() => setShowLogin(false)}>
+            <button className="log" color="secondary" onClick={() => setShowLogin(false)}>
               Sign Up
             </button>
           </p>
@@ -26,7 +27,7 @@ function Login({ setUser }) {
           <divider />
           <p>
             Already have an account? &nbsp;
-            <button color="secondary" onClick={() => setShowLogin(true)}>
+            <button className="log" color="secondary" onClick={() => setShowLogin(true)}>
               Log In
             </button>
           </p>

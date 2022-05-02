@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Login.css';
+import './LoginForm.css';
 
 function LoginForm({ setUser }) {
     const [email, setEmail] = useState("");
@@ -33,7 +35,7 @@ function LoginForm({ setUser }) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="login-form" onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="email"> Email </label>
                 <input
@@ -55,7 +57,7 @@ function LoginForm({ setUser }) {
                 />
             </div>
             <div>
-                <button variant="fill" color="primary" type="submit">
+                <button className="log" variant="fill" color="primary" type="submit">
                 {isLoading ? "Loading..." : "Login"}
                 </button>
             </div>

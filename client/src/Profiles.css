@@ -1,7 +1,13 @@
 .profile {
     display: flex;
-    margin: auto;
+    /* margin: auto; */
     font-size: 1em;
     padding: 0.5em 0.5em;
-    align-items: center
+    /* align-items: center */
+    flex-wrap: wrap;
+}
+
+.add-btn {
+    height: 10em;
+    width: 10em;
 }
