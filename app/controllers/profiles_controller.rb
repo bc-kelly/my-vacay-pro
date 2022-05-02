@@ -19,7 +19,7 @@ class ProfilesController < ApplicationController
       def index
         profiles = Profile.where(account_id: session[:account_id])
         render json: profiles, status: :ok
-    end
+      end
     
       private
     

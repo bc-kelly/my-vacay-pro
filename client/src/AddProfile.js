@@ -64,7 +64,7 @@ function AddProfile( ) {
                     </div>
                     
                     <input type="submit" value="Add Profile" />
-                </form>
+            </form>
         </div>
 
     )
