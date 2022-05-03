@@ -23,7 +23,7 @@ function Profiles({profiles}) {
     return (
       <div>
           <form className="select-profile" > 
-          <label>
+          <label className="profile-dropdown" >
             Profile: 
             <select 
                 type="text"

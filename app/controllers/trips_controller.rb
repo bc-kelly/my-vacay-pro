@@ -8,7 +8,7 @@ class TripsController < ApplicationController
 
       def show
         # render json: @current_profile
-        trip = Trip.find_by(id: session[:profile_id])
+        trip = Trip.find_by(id: session[:account_id])
         if trip
           render json: trip
         else
@@ -24,7 +24,7 @@ class TripsController < ApplicationController
       private 
       
       def trip_params
-        params.permit(:name, :location, :date_start, :date_end, :profile_id, :hotel_id)
+        params.permit(:name, :location, :date_start, :date_end, :profile_id, :hotel_id, :booked)
       end
 
 

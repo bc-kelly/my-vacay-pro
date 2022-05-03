@@ -1,5 +1,22 @@
 .account-summary{
     font-size: 1.5em;  
     padding: 5%;  
- 
+    color: white;
+}
+
+.account-summary-card {
+    display: flex;
+    /* margin: auto; */
+    font-size: 1em;
+    padding: 0.5em 0.5em;
+    /* align-items: center */
+    flex-wrap: wrap;
+    /* width: 15vh;
+    max-height: 15vh; */
+    
+}
+
+.points-summary {
+    color: white;
+    margin: 5px;
 }

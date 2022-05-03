@@ -7,7 +7,7 @@ import './NavBar.css';
 function NavBar(){
     return (
         <div className="nav-bar" > 
-                <NavLink exact to="/">Home</NavLink>
+                <NavLink exact to="/" className="home-link" >Home</NavLink>
                 <NavLink to="/browse">Browse</NavLink>
                 <NavLink to="/accountsummary">Account Summary</NavLink>
                 <NavLink to="/profiles">Profiles</NavLink>

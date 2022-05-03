@@ -4,6 +4,8 @@ const tripsAPI = '/trips';
 
 function MyTripsForm( {hotels, profiles}) {
 
+    // let tripBooked = document.querySelector('#booked')
+
     const [trips, setTrips] = useState([]);
     // const [formData, setFormData] = useState ({
     //     name: "",
@@ -66,6 +68,8 @@ function MyTripsForm( {hotels, profiles}) {
         // event.target.reset();
     }
 
+  
+
 
     return (
         <div > 
@@ -100,10 +104,16 @@ function MyTripsForm( {hotels, profiles}) {
                         <label htmlFor="hotel_id">Hotel</label>
                         <input id="hotel_id" type="text" placeholder="hotel_id" />
                     </div>
-                    
+                 
                     <input type="submit" value="Save" />
             </form>
-       
+            <div>
+                    <button 
+                    // id="booked" onClick={changeBooked} 
+                    > 
+                        draft
+                    </button>
+                    </div>
         </div>
 
     )
