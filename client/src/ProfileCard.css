@@ -1,4 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
 .profile-card {
     margin: 3%;
-    outline: 3px solid black;
+    outline: 2px solid black;
+    border-radius: 10px;
+    height: 35vh;
+    width: 30vh;
+    padding: 10px;
+    background-color: white;
+    margin: 2% auto;
+    font-family: Raleway;
 }
+
+.profile-image {
+    width: 20vh;
+    max-height: 25vh;
+    padding: 5px;
+}
+
+
+
+
+/* outline: 2px solid black;
+margin: 2% auto;
+border-radius: 10px;
+padding: 10px;
+max-width: 65%;
+background-color: white; */

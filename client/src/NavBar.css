@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+a:visited{
+    text-decoration: none; 
+    color: black;
+}
+
 .nav-bar {
     justify-content: space-between;
     display: flex;
@@ -6,4 +13,7 @@
     outline: 2px solid black;
     padding: 0.5em 0.5em 0.5em;
     border-radius: 5px;
+    background-color: #da7b93;
+    font-family: Raleway;
+    color: black;
 }

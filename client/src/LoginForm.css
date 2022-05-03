@@ -1,5 +1,8 @@
 .login-form {
-    outline: 2px solid black;
+    outline: 2px solid #da7b93;
+    width: 45%;
+    margin: auto;
     border-radius: 10px;
     font-size: .75em;
+    background-color: #da7b93;
 }

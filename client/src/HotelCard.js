@@ -5,8 +5,8 @@ function HotelCard({hotel}) {
 
     return (
         <div className="hotel-card" > 
-            <img src={hotel.image} alt={hotel.name}/>
-            <h3> {hotel.name} </h3>
+            <img className="hotel-image" src={hotel.image} alt={hotel.name}/>
+            <h3 className="hotel-name" > {hotel.name} </h3>
             <h3> {hotel.city_state} </h3>
         </div>
     )

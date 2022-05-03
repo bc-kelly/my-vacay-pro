@@ -10,4 +10,10 @@
 .add-btn {
     height: 10em;
     width: 10em;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.select-profile {
+    margin: 10px;
 }

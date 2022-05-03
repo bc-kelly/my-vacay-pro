@@ -1,11 +1,26 @@
 .home {
     font-size: 2em;
     padding: 5%;
-    outline: 2px solid black;
+    outline: 2px solid #da7b93;
     margin: 2% auto;
     max-width: 60%;
     border-radius: 10px;
+    background-color: #2f4454;
 }
+
+.home-title {
+    font-size: 1.75em;
+    padding: 5%;
+}
+
+/* html .home {
+    background: url(https://prod-virtuoso.dotcmscloud.com/dA/188da7ea-f44f-4b9c-92f9-6a65064021c1/heroImage1/PowerfulReasons_hero.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    backdrop-filter: blur(10px); 
+} */
 
 /* .login-text {
     font-size: 1.5em;

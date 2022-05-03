@@ -3,9 +3,21 @@
     width: 80%;
     margin: auto;
 } */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
-img{
+.hotel-image {
     max-width: 25vh;
     min-height: 25vh;
     padding: 5px;
+    
+}
+
+.hotel-card {
+    font-family: Raleway;
+    background-color: white;
+}
+
+.hotel-name {
+    font-family: Raleway;
+    font-size: 1.5em;
 }

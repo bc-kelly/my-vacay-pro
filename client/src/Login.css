@@ -1,5 +1,7 @@
 .log {
     border-radius: 5px;
+    margin: 4px;
+    background-color: white;
 }
 
 .account {

@@ -4,10 +4,11 @@
     border-radius: 10px;
     padding: 10px;
     max-width: 55%;
+    background-color: white;
 }
 
-img {
+/* img {
     max-width: 20vh;
     min-height: 20vh;
     padding: 5px;
-}
+} */

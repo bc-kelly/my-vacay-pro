@@ -63,7 +63,7 @@ function MyTripsForm( {hotels, profiles}) {
         handleNewTrip(newTrip);
         console.log(newTrip)
         // navigate("./profiles");
-        event.target.reset();
+        // event.target.reset();
     }
 
 

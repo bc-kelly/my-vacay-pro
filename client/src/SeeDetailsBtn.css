@@ -2,4 +2,10 @@
     border-radius: 5px;
     margin-bottom: 1%;
     font-size: .8em;
+    background-color: white;
+    transition: background-color .5s;
+}
+
+.see-details :hover {
+    background-color: hotpink;
 }

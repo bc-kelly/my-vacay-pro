@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
+import './AddProfile.css';
 
 const profilesAPI = '/profiles';
 
@@ -45,21 +46,21 @@ function AddProfile( ) {
     }
 
     return (
-        <div > 
-            add profile form
+        <div className="add-form" > 
+            Create Your Own Profile
             <form onSubmit= {handleFormSubmit}>
-                    <div >
+                    <div className="form-rows" >
                         <label htmlFor="name">Name</label>
                         <input id="name" type="text" placeholder="Profile Name" />
                     </div>
 
-                    <div>
+                    <div  className="form-rows">
                         <label htmlFor="image">Image</label>
                         <input id="image" type="text" placeholder="Profile Image" />
                     </div>
 
-                    <div>
-                        <label htmlFor="account_id">account_id</label>
+                    <div  className="form-rows">
+                        <label htmlFor="account_id">Account</label>
                         <input id="account_id" type="text" placeholder="account_id" />
                     </div>
                     

@@ -28,7 +28,7 @@ function Login({ setUser }) {
           <p>
             Already have an account? &nbsp;
             <button className="log" color="secondary" onClick={() => setShowLogin(true)}>
-              Log In
+              Login
             </button>
           </p>
         </>

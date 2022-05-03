@@ -4,7 +4,7 @@ import './ProfileCard.css';
 function ProfileCard({profile}) {
     return (
         <div className="profile-card" > 
-            <img src={profile.image} alt={profile.name}/>
+            <img className="profile-image" src={profile.image} alt={profile.name}/>
             <h3> {profile.name} </h3>
         </div>
 

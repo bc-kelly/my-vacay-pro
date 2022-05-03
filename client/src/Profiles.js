@@ -22,9 +22,9 @@ function Profiles({profiles}) {
 
     return (
       <div>
-          <form> 
+          <form className="select-profile" > 
           <label>
-            Profile:
+            Profile: 
             <select 
                 type="text"
                 name="profile_id"
