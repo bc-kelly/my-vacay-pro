@@ -34,7 +34,6 @@ function MyTripsForm( {hotels, profiles}) {
         },
         body: JSON.stringify(trip),
         })
-
         .then(response => response.json())
         // .then((newTrip) => handleAddReview(newReview))
         .then(json => {
@@ -53,6 +52,7 @@ function MyTripsForm( {hotels, profiles}) {
         const date_end = event.target['date_end'].value
         const profile_id = event.target['profile_id'].value
         const hotel_id = event.target['hotel_id'].value
+        
 
         const newTrip = {
             name: name,
@@ -87,17 +87,16 @@ function MyTripsForm( {hotels, profiles}) {
 
                     <div className="form-rows" >
                         <label htmlFor="date_start">Start Date</label>
-                        <input id="date_start" type="text" placeholder="Start date" />
+                        <input id="date_start" type="date" placeholder="MM/DD/YYYY" />
                     </div>
 
                     <div className="form-rows" >
                         <label htmlFor="date_end">End Date</label>
-                        <input id="date_end" type="text" placeholder="End date" />
+                        <input id="date_end" type="date" placeholder="MM/DD/YYYY" />
                     </div>
 
                     <div className="form-rows" >
                         <label htmlFor="profile_id">Profile</label>
-                        
                         <input id="profile_id" type="text" placeholder="profile_id" />
                     </div>
 

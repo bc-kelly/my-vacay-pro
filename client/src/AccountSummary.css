@@ -31,6 +31,13 @@
 .account-summary-trip-card .trip-card {
     height: 35vh;
     width: 20vh;
+    margin: 10px;
+   
+}
+
+.account-summary-trip-card {
+    display: flex;
+    /* margin: auto; */
 }
 
 /* .profile-card {

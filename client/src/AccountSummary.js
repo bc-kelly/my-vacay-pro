@@ -50,20 +50,24 @@ function AccountSummary({profiles, hotelTrip}) {
             <div className="points-summary"> 
                 Points Summary: XXX 
             </div>
+
                 <div className="account-summary" > 
                     An overview of your account:
                 </div>
+
                 <div className="account-summary-card" > 
                     {profileCard}
                 </div>
+
+                <div>show posted trips here</div>
+
                 <div className="account-summary-trip-card" > 
-                    show posted trips here
                     {/* {showAddedHotel} */}
                     {tripCard}
                     {/* {trips} */}
                 </div>
-        </div>
 
+        </div>
     )
 }
 

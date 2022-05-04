@@ -42,7 +42,7 @@ function MyTrips({hotelTrip}) {
 
     return (
         <div > 
-            <div > 
+            <div className="cards-temp-added" > 
                 {showAddedHotel}
             </div>
         <div className="trips-section" > 

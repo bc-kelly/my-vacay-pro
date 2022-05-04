@@ -17,8 +17,17 @@
 .my-trips-trip-card .trip-card {
     height: 35vh;
     width: 20vh;
+    margin: 10px;
 }
 
 .trips-section {
     margin-top: 2%;
+}
+
+.my-trips-trip-card {
+    display: flex;
+}
+
+.cards-temp-added {
+    display: flex;
 }

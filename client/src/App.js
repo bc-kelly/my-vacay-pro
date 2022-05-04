@@ -10,6 +10,7 @@ import ShowHotel from "./ShowHotel";
 import Login from "./Login";
 import AddProfile from "./AddProfile";
 import MyTripsForm from "./MyTripsForm";
+import EditProfile from "./EditProfile";
 import './App.css';
 
 const hotelsAPI = '/hotels';
@@ -98,6 +99,7 @@ console.log(hotelTrip)
                 <Route path ="/login" element= { <Login setUser={setUser} /> } />
                 <Route path ="/addprofile" element= { <AddProfile /> } />
                 <Route path ="/mytripsform" element= { <MyTripsForm hotels={hotels} profiles={profiles} /> } />
+                <Route path ="/editprofile/:id" element= { <EditProfile /> } />
           </Routes>
     </div>
   );
