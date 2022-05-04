@@ -28,6 +28,11 @@
     padding: 2px;
 }
 
+.account-summary-trip-card .trip-card {
+    height: 35vh;
+    width: 20vh;
+}
+
 /* .profile-card {
     margin: 3%;
     outline: 2px solid black;

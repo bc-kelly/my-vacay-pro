@@ -1,9 +1,32 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import HotelCard from './HotelCard'
+import TripCard from './TripCard'
 import MyTripsForm from './MyTripsForm'
 import './MyTrips.css'
 
-function MyTrips({hotelTrip, trips}) {
+const tripsAPI = './trips'
+
+function MyTrips({hotelTrip}) {
+    const [trips, setTrips] = useState([]);
+
+    useEffect(()=>{
+        fetch(tripsAPI)
+        .then(resp => resp.json())
+        .then(tripsData => {
+          console.log(tripsData)
+          setTrips(tripsData)
+        })
+      }, [])
+
+
+    const tripCard = trips.map(trip => {
+        console.log(trips)
+        return (
+        <div> 
+            <TripCard key={trip.id} trip={trip} />
+        </div>
+        )
+    })
 
     const showAddedHotel = hotelTrip.map((addedHotel) => {
         return (
@@ -22,8 +45,11 @@ function MyTrips({hotelTrip, trips}) {
             <div > 
                 {showAddedHotel}
             </div>
-        <div> 
+        <div className="trips-section" > 
             place posted trips here
+            <div className="my-trips-trip-card"> 
+                {tripCard}
+            </div>
         </div>
         </div>
     )

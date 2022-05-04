@@ -5,8 +5,8 @@
     margin: 3%;
     outline: 2px solid black;
     border-radius: 10px;
-    height: 35vh;
-    width: 30vh;
+    height: 25vh;
+    width: 20vh;
     padding: 10px;
     background-color: white;
     margin: 2% auto;
@@ -16,7 +16,7 @@
 .profile-image {
     width: 20vh;
     max-height: 25vh;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 

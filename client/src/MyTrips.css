@@ -3,12 +3,22 @@
     margin: 2% auto;
     border-radius: 10px;
     padding: 10px;
-    max-width: 55%;
-    background-color: white;
+    width: 40vh;
+    /* background-color: white; */
+    height: 60vh;
 }
 
-/* img {
+.trip-card img {
     max-width: 20vh;
     min-height: 20vh;
     padding: 5px;
-} */
+}
+
+.my-trips-trip-card .trip-card {
+    height: 35vh;
+    width: 20vh;
+}
+
+.trips-section {
+    margin-top: 2%;
+}

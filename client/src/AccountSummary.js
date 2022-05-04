@@ -10,7 +10,7 @@ function AccountSummary({profiles, hotelTrip}) {
     const [trips, setTrips] = useState([]);
 
     const profileCard = profiles.map(profile => {
-        console.log(profile)
+        // console.log(profile)
         return <ProfileCard key={profile.id} profile={profile} />
     })
 
@@ -26,24 +26,24 @@ function AccountSummary({profiles, hotelTrip}) {
     //     )
     // })
 
+    useEffect(()=>{
+        fetch(tripsAPI)
+        .then(resp => resp.json())
+        .then(tripsData => {
+          console.log(tripsData)
+          setTrips(tripsData)
+        })
+      }, [])
+
+
     const tripCard = trips.map(trip => {
-        console.log(trip)
+        console.log(trips)
         return (
         <div> 
             <TripCard key={trip.id} trip={trip} />
         </div>
         )
     })
-
-      useEffect(()=>{
-      fetch(tripsAPI)
-      .then(resp => resp.json())
-      .then(tripsData => {
-        // console.log(profilesData)
-        setTrips(tripsData)
-      })
-    }, [])
-
 
     return (
         <div> 
@@ -54,13 +54,13 @@ function AccountSummary({profiles, hotelTrip}) {
                     An overview of your account:
                 </div>
                 <div className="account-summary-card" > 
-                {profileCard}
+                    {profileCard}
                 </div>
-                <div > 
+                <div className="account-summary-trip-card" > 
                     show posted trips here
-                {/* {showAddedHotel} */}
-                {tripCard}
-                {/* {trips} */}
+                    {/* {showAddedHotel} */}
+                    {tripCard}
+                    {/* {trips} */}
                 </div>
         </div>
 

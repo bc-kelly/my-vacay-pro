@@ -5,11 +5,13 @@ function TripCard( {trip}) {
     return (
         <div className="trip-card" > 
             <h3> {trip.name} </h3>
-            {/* <h3> {trip.location} </h3>
-            <h3> {trip.date_start} </h3>
-            <h3> {trip.date_end} </h3>
+            <h3> {trip.hotel.name} </h3>
+            <h3> {trip.hotel.city_state} </h3>
+            {/* <h3> {trip.location} </h3> */}
+            <h3> Start date: {trip.date_start} </h3>
+            <h3> End Date: {trip.date_end} </h3>
             <h3> {trip.points} </h3>
-            <h3> {trip.booked} </h3> */}
+            <h3> {trip.booked} </h3>
         </div>
 
     )
