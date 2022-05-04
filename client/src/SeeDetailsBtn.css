@@ -3,9 +3,9 @@
     margin-bottom: 1%;
     font-size: .8em;
     background-color: white;
-    transition: background-color .5s;
+    transition: background-color .3s;
 }
 
-.see-details :hover {
-    background-color: hotpink;
+.see-details:hover {
+    background-color: #da7b93;
 }

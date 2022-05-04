@@ -59,7 +59,7 @@ function App() {
       fetch(tripsAPI)
       .then(resp => resp.json())
       .then(tripsData => {
-        // console.log(profilesData)
+        console.log(tripsData)
         setTrips(tripsData)
       })
     }, [])
@@ -86,12 +86,12 @@ function App() {
 console.log(hotelTrip)
   return (
     <div className="App">
-      <button className="logout-btn" onClick = {handleLogoutClick} > Logout </button>
+      <button className="see-details" onClick = {handleLogoutClick} > Logout </button>
      <NavBar />
           <Routes>
                 <Route exact path ="/" element= { <Home setUser={setUser} /> } /> 
                 <Route path ="/browse" element= { <Browse hotels={hotels} addHotelToTrip={addHotelToTrip} /> } /> 
-                <Route path ="/accountsummary" element= { <AccountSummary profiles={profiles} hotelTrip={hotelTrip} /> } />
+                <Route path ="/accountsummary" element= { <AccountSummary profiles={profiles} hotelTrip={hotelTrip} trips={trips} /> } />
                 <Route path ="/profiles" element= { <Profiles profiles={profiles} /> } /> 
                 <Route path ="/mytrips" element= { <MyTrips trips={trips} hotels={hotels} hotelTrip={hotelTrip} /> } /> 
                 <Route path ="/showhotel/:id" element= { <ShowHotel addHotelToTrip={addHotelToTrip} /> } />

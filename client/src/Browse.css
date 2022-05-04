@@ -6,3 +6,10 @@
     max-width: 65%;
     background-color: white;
 }
+
+.hotel-search {
+    margin-top: 10px;
+    width: 30%;
+    padding: 5px;
+    border-radius: 5px;
+}

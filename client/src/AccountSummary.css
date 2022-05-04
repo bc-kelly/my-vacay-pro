@@ -13,8 +13,38 @@
     flex-wrap: wrap;
     /* width: 15vh;
     max-height: 15vh; */
-    
 }
+
+.account-summary-card .profile-card {
+    height: 25vh;
+    width: 20vh;
+    padding: 5px;
+    margin: 1% auto;
+}
+
+.account-summary-card .profle-image {
+    width: 15vh;
+    max-height: 10vh;
+    padding: 2px;
+}
+
+/* .profile-card {
+    margin: 3%;
+    outline: 2px solid black;
+    border-radius: 10px;
+    height: 35vh;
+    width: 30vh;
+    padding: 10px;
+    background-color: white;
+    margin: 2% auto;
+    font-family: Raleway;
+}
+
+.profile-image {
+    width: 20vh;
+    max-height: 25vh;
+    padding: 5px;
+} */
 
 .points-summary {
     color: white;

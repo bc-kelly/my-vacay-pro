@@ -1,4 +1,5 @@
 import React, { useState }from "react";
+import './MyTripsForm.css'
 
 const tripsAPI = '/trips';
 
@@ -73,46 +74,46 @@ function MyTripsForm( {hotels, profiles}) {
 
     return (
         <div > 
-            <form onSubmit= {handleTripFormSubmit}>
-                    <div >
+            <form className="form" onSubmit= {handleTripFormSubmit}>
+                    <div className="form-rows" >
                         <label htmlFor="name">Name</label>
                         <input id="name" type="text" placeholder="Trip Name" />
                     </div>
 
-                    <div>
+                    <div className="form-rows" >
                         <label htmlFor="location">Location</label>
                         <input id="location" type="text" placeholder="Trip Location" />
                     </div>
 
-                    <div>
+                    <div className="form-rows" >
                         <label htmlFor="date_start">Start Date</label>
                         <input id="date_start" type="text" placeholder="Start date" />
                     </div>
 
-                    <div>
+                    <div className="form-rows" >
                         <label htmlFor="date_end">End Date</label>
                         <input id="date_end" type="text" placeholder="End date" />
                     </div>
 
-                    <div>
+                    <div className="form-rows" >
                         <label htmlFor="profile_id">Profile</label>
                         
                         <input id="profile_id" type="text" placeholder="profile_id" />
                     </div>
 
-                    <div>
+                    <div className="form-rows" >
                         <label htmlFor="hotel_id">Hotel</label>
                         <input id="hotel_id" type="text" placeholder="hotel_id" />
                     </div>
                  
-                    <input type="submit" value="Save" />
+                    <input type="submit" value="Save" className="see-details" />
             </form>
-            <div>
-                    <button 
-                    // id="booked" onClick={changeBooked} 
-                    > 
-                        draft
-                    </button>
+                    <div>
+                        <button className="see-details" 
+                        // id="booked" onClick={changeBooked} 
+                        > 
+                            draft
+                        </button>
                     </div>
         </div>
 

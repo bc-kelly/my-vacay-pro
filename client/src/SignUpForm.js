@@ -31,7 +31,7 @@ function SignUpForm({ setUser }) {
         setIsLoading(false);
         if (r.ok) {
             r.json().then((user) => setUser(user));
-            navigate("/browse");
+            navigate("/profiles");
             alert (`Thanks for creating an account ${accountName}!`);
         } else {
             r.json().then((err) => setErrors(err.errors));

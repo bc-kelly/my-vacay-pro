@@ -3,7 +3,7 @@ import HotelCard from './HotelCard'
 import MyTripsForm from './MyTripsForm'
 import './MyTrips.css'
 
-function MyTrips({hotelTrip}) {
+function MyTrips({hotelTrip, trips}) {
 
     const showAddedHotel = hotelTrip.map((addedHotel) => {
         return (
@@ -19,10 +19,13 @@ function MyTrips({hotelTrip}) {
 
     return (
         <div > 
-            {showAddedHotel}
-           
+            <div > 
+                {showAddedHotel}
+            </div>
+        <div> 
+            place posted trips here
         </div>
-
+        </div>
     )
 }
 

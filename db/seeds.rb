@@ -48,4 +48,7 @@ Hotel.create(name: "Mandarin Oriental Miami", city_state: "Miami, Florida", tag:
 Hotel.create(name: "Hayes Street Hotel Nashville", city_state: "Nashville, Teneessee", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/99411314.webp?k=59b9fe3bc941eb2f22ccb72449401a8796a436b2b2614b024a139fcd45e35dcd&o=&s=1")
 Hotel.create(name: "Hutton Hotel", city_state: "Nashville, Teneessee", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/318874840.webp?k=f60954891e7e868b7bb15c60c0c34ebae1bbcd3084dc072d4eb251bacc71cc1c&o=&s=1")
 
+puts "🌱 Creating trips..."
+Trip.create(name: "Girls Trip", location: "NYC", date_start: "05/15/2022", date_end: "06/15/2022", points: 100, profile_id: 1, hotel_id: 1, booked: false )
+
 puts "Done seeding!" 

@@ -25,7 +25,7 @@ function Login({ setUser }) {
         <>
           <SignUpForm setUser={setUser} />
           <divider />
-          <p>
+          <p className="already" >
             Already have an account? &nbsp;
             <button className="log" color="secondary" onClick={() => setShowLogin(true)}>
               Login

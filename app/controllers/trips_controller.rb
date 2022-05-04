@@ -8,7 +8,7 @@ class TripsController < ApplicationController
 
       def show
         # render json: @current_profile
-        trip = Trip.find_by(id: session[:account_id])
+        trip = Trip.find_by(id: session[:profile_id])
         if trip
           render json: trip
         else
@@ -17,8 +17,10 @@ class TripsController < ApplicationController
       end
 
       def index
-        trips = Trip.where(account_id: session[:account_id])
+        trips = Trip.where(profile_id: session[:profile_id])
         render json: trips, status: :ok
+        # tripOne= Account.find_by(profile_id)
+        # render json:tripOne, status: :ok
       end
 
       private 
@@ -29,3 +31,5 @@ class TripsController < ApplicationController
 
 
 end
+
+# Bar.joins(:foo).where(foo: { qux: 'hi' })
