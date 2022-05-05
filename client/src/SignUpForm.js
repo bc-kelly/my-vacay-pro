@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './SignUpForm.css'
+import './LoginForm.css';
 
 function SignUpForm({ setUser }) {
     const [accountName, setAccountName] = useState("");
@@ -43,12 +44,13 @@ function SignUpForm({ setUser }) {
     return (
         <form onSubmit={handleSubmit}>
             <div className="signup-form" >
-            <div> Create your account below </div>
+            <div className="login-header" > Create your account below </div>
                 <div>
                     <label htmlFor="account_name"> </label>
                     <input
+                    className="form-input"
                     type="text"
-                    id="account_name"
+                    id="txt-input"
                     placeholder="account name"
                     autoComplete="off"
                     value={accountName}
@@ -58,8 +60,9 @@ function SignUpForm({ setUser }) {
                 <div>
                     <label htmlFor="email"></label>
                     <input
+                    className="form-input"
                     type="text"
-                    id="email"
+                    id="txt-input"
                     placeholder="email"
                     autoComplete="off"
                     value={email}
@@ -69,8 +72,9 @@ function SignUpForm({ setUser }) {
                 <div>
                     <label htmlFor="password"></label>
                     <input
+                    className="form-input"
                     type="password"
-                    id="password"
+                    id="txt-input"
                     placeholder="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
@@ -80,8 +84,9 @@ function SignUpForm({ setUser }) {
                 <div>
                     <label htmlFor="password"> </label>
                     <input
+                    className="form-input"
                     type="password"
-                    id="password_confirmation"
+                    id="txt-input"
                     placeholder="confirm your password"
                     value={passwordConfirmation}
                     onChange={(e) => setPasswordConfirmation(e.target.value)}
@@ -89,7 +94,7 @@ function SignUpForm({ setUser }) {
                     />
                 </div>
                 <div>
-                    <button className="log" type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
+                    <button className="login-btn" type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
                 </div>
                 <div>
                     {errors.map((err) => (

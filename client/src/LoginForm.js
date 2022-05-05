@@ -37,11 +37,12 @@ function LoginForm({ setUser }) {
     return (
         <form className="login-form" onSubmit={handleSubmit}>
             <div>
-                <div> Login here with your email and password</div>
+                <div className="login-header" > Login here with your email and password</div>
                 <label htmlFor="email"> </label>
                 <input
+                className="form-input"
                 type="text"
-                id="email"
+                id="txt-input"
                 placeholder="email"
                 autoComplete="off"
                 value={email}
@@ -51,8 +52,9 @@ function LoginForm({ setUser }) {
             <div>
                 <label htmlFor="password"> </label>
                 <input
+                className="form-input"
                 type="password"
-                id="password"
+                id="txt-input"
                 placeholder="password"
                 autoComplete="current-password"
                 value={password}
@@ -60,7 +62,7 @@ function LoginForm({ setUser }) {
                 />
             </div>
             <div>
-                <button className="log" variant="fill" color="primary" type="submit">
+                <button className="login-btn" variant="fill" color="primary" type="submit">
                 {isLoading ? "Loading..." : "Login"}
                 </button>
             </div>
