@@ -31,3 +31,9 @@
 .cards-temp-added {
     display: flex;
 }
+
+.page-divider {
+    height: 30%;
+    width: 90%;
+    background-color: white;
+}

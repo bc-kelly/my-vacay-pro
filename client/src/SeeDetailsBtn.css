@@ -1,11 +1,51 @@
-.see-details {
+.see-details-btn {
+    display: inline-block;
+    color: #252537;
+  
+    width: 180px;
+    height: 40px;
+  
+    padding: 0 20px;
+    background: #da7b93;
+    border-radius: 5px;
+    
+    outline: none;
+    border: none;
+  
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    
+    margin: 1% auto;
+    letter-spacing: 0.05em;
+}
+
+.see-details-btn:hover {
+    background-color: #fff;
+}
+
+.logout-btn:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+  }
+  
+  /* buttons hover Animation */
+  .see-details-btn:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+  }
+  @keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+  }
+
+/* .see-details {
     border-radius: 5px;
     margin-bottom: 1%;
     font-size: .8em;
     background-color: white;
     transition: background-color .3s;
-}
-
-.see-details:hover {
-    background-color: #da7b93;
-}
+} */

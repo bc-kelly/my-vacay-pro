@@ -6,7 +6,7 @@ function SeeDetailsBtn({hotels, hotel}) {
     
     return (
         <div> 
-            <button className="see-details" > 
+            <button className="see-details-btn" > 
                 <Link to={`/showhotel/${hotel.id}`}> see details </Link>
             </button>
         </div>

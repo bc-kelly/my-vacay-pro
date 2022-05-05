@@ -1,11 +1,63 @@
+# require 'uri'
+# require 'net/http'
+# require 'openssl'
+# require 'pry'
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# url = URI("https://hotels4.p.rapidapi.com/properties/list?destinationId=1506246&pageNumber=1&pageSize=25&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD")
+
+# http = Net::HTTP.new(url.host, url.port)
+# http.use_ssl = true
+# http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+# request = Net::HTTP::Get.new(url)
+# request["X-RapidAPI-Host"] = 'hotels4.p.rapidapi.com'
+# request["X-RapidAPI-Key"] = '7062bef93fmshb9d6aeae3417e3fp1f3a1djsn83a764765e1c'
+
+# response = http.request(request)
+# hotels_array = JSON.parse(response)
+# binding.pry
+
+
+# response.each do |hotel|
+#    hotel1 = Hotel.create(name: hotel["name"])
+#    binding.pry
+# end
+# puts response.read_body
+
+
+
+
+
+# require 'uri'
+# require 'net/http'
+# require 'openssl'
+# require 'pry'
+
+
+# url = URI("https://hotels-com-free.p.rapidapi.com/suggest/v1.7/json?query=San%20Francisco&locale=en_US")
+
+
+# http = Net::HTTP.new(url.host, url.port)
+# http.use_ssl = true
+# http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+# request = Net::HTTP::Get.new(url)
+# request["X-RapidAPI-Host"] = 'hotels-com-free.p.rapidapi.com'
+# request["X-RapidAPI-Key"] = '7062bef93fmshb9d6aeae3417e3fp1f3a1djsn83a764765e1c'
+
+# response = http.request(request)
+# binding.pry
+
+# puts response.read_body
+
+
+
+
+
+
+
+
+
 puts "Deleting old data..."
 
 Hotel.destroy_all

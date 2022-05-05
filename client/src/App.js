@@ -43,7 +43,7 @@ function App() {
       .then(resp => resp.json())
       .then(hotelsData => {
         // console.log(hotelsData)
-        setHotels(hotelsData)
+          setHotels(hotelsData)
       })
     }, [])
 
@@ -55,6 +55,7 @@ function App() {
         setProfiles(profilesData)
       })
     }, [])
+    //move to profiles component ,same with the trips fetch 
 
     useEffect(()=>{
       fetch(tripsAPI)
@@ -87,7 +88,7 @@ function App() {
 // console.log(hotelTrip)
   return (
     <div className="App">
-      <button className="see-details" onClick = {handleLogoutClick} > Logout </button>
+      <button className="logout-btn" onClick = {handleLogoutClick} > Logout </button>
      <NavBar />
           <Routes>
                 <Route exact path ="/" element= { <Home setUser={setUser} /> } /> 
@@ -106,3 +107,16 @@ function App() {
 }
 
 export default App;
+
+// useEffect(()=>{
+//   fetch(hotelsAPI)
+//   .then(resp => resp.json())
+//   .then(hotelsData => {
+//     // console.log(hotelsData)
+//     if(typeof(hotelsData) === 'object'){
+//       return;
+//     }else{
+//       setHotels(hotelsData)
+//     }
+//   })
+// }, [])

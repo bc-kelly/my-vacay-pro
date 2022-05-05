@@ -17,9 +17,11 @@ a:visited{
     font-family: Raleway;
     color: black;
     text-decoration: none; 
+    font-size: 1.25em;
 }
 
 .home-link:hover {
    /* font-weight: bold; */
    box-shadow: 2px 2px 2px 2px white;
+   border-radius: 5px;
 }

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 .account-summary{
     font-size: 1.5em;  
-    padding: 5%;  
+    padding: 2%;  
     color: white;
+    font-family: 'Raleway';
 }
 
 .account-summary-card {

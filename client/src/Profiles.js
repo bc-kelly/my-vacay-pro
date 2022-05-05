@@ -4,16 +4,16 @@ import './Profiles.css';
 
 
 function Profiles({profiles}) {
-    const [formData, setFormData] = useState ({
-        profile_id: "",
-    });
+    // const [formData, setFormData] = useState ({
+    //     profile_id: "",
+    // });
 
-    function handleChange(event) {
-        setFormData({
-            ...formData,
-            [event.target.name]: event.target.value,
-        });
-    }
+    // function handleChange(event) {
+    //     setFormData({
+    //         ...formData,
+    //         [event.target.name]: event.target.value,
+    //     });
+    // }
 
     const profileCard = profiles.map(profile => {
         // console.log(profile)
@@ -22,7 +22,7 @@ function Profiles({profiles}) {
 
     return (
       <div>
-          <form className="select-profile" > 
+          {/* <form className="select-profile" > 
           <label className="profile-dropdown" >
             Profile: 
             <select 
@@ -40,7 +40,7 @@ function Profiles({profiles}) {
                 ))}     
             </select>
             </label>
-          </form>
+          </form> */}
             <div className="profile" >   
                 {profileCard}
             </div>

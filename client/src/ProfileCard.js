@@ -1,8 +1,13 @@
 import React from "react";
 import './ProfileCard.css';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function ProfileCard({profile}) {
+
+    // function clickOnCard() {
+
+    // }
+
     return (
         <div className="profile-card" > 
             <img className="profile-image" src={profile.image} alt={profile.name}/>

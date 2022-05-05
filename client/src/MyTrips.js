@@ -45,6 +45,7 @@ function MyTrips({hotelTrip}) {
             <div className="cards-temp-added" > 
                 {showAddedHotel}
             </div>
+            <div className="page-divider" > </div>
         <div className="trips-section" > 
             place posted trips here
             <div className="my-trips-trip-card"> 

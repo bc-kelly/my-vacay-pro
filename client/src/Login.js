@@ -16,7 +16,7 @@ function Login({ setUser }) {
           <divider />
           <p className="account" >
             Don't have an account? &nbsp;
-            <button className="log" color="secondary" onClick={() => setShowLogin(false)}>
+            <button className="login-btn" color="secondary" onClick={() => setShowLogin(false)}>
               Sign Up
             </button>
           </p>
@@ -27,7 +27,7 @@ function Login({ setUser }) {
           <divider />
           <p className="already" >
             Already have an account? &nbsp;
-            <button className="log" color="secondary" onClick={() => setShowLogin(true)}>
+            <button className="login-btn" color="secondary" onClick={() => setShowLogin(true)}>
               Login
             </button>
           </p>
