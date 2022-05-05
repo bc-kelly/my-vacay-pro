@@ -1,14 +1,16 @@
 import React, {useState, useEffect} from "react";
-import {useParams} from "react-router-dom";
+import {useParams, useNavigate} from "react-router-dom";
 import ProfileCard from "./ProfileCard";
+import './EditProfile.css';
 
 function EditProfile( ) {
     const params = useParams();
-    const profilesAPI = '/profiles'
-    const [profile, setProfile] = useState(null)
+    const profilesAPI = '/profiles';
+    const [profile, setProfile] = useState(null);
+    let navigate = useNavigate();
 
     useEffect(()=>{
-        fetch(profilesAPI)
+        fetch(`${profilesAPI}/${params.id}`)
         .then(resp => resp.json())
         .then(profilesData => {
           console.log(profilesData)
@@ -23,30 +25,38 @@ function EditProfile( ) {
            'Content-type': 'application/json; charset=UTF-8',
          },
           body: JSON.stringify(profile)
-         })
-          .then((response) => response.json())
-          .then((json) => console.log(json));
-      }
+         }).then((response) => { 
+        if (response.ok) {
+            navigate('/profiles');
+            console.log('edit success')
+            response.json().then((json) => console.log(json)); 
+        } else {
+            console.log('edit fail')
+        }
+      });
+    }
 
       if(!profile) return null;
     return (
         <div> 
-            <div>
-                <ProfileCard profile={profile} />
+            <div className="container" >
+                <div  className="edit-profile" >  <ProfileCard profile={profile} /> </div>
                 
-                <div> 
+                <div className="edit-form" > 
                     <form onSubmit={submit} >
                         <div>
-                            <label htmlFor="name">Name</label>
+                            Change profile name:
+                            <label htmlFor="name"> </label>
                             <input 
                                 id="name" 
                                 type="text" 
                                 placeholder="Profile Name"
                                 value={profile.name}
                                 onChange={(e) =>  setProfile({ ...profile, name: e.target.value})}
+                                className="input-part"
                             />
                         </div>
-                        <input type="submit" value="Edit Profile" />
+                        <input type="submit" value="Save" className="save-btn" />
                     </form>
                 </div>
             </div>
@@ -57,3 +67,16 @@ function EditProfile( ) {
 }
 
 export default EditProfile;
+
+// const submit = () => {
+//     fetch(`${profilesAPI}/${params.id}`, {
+//       method: 'PATCH',
+//       headers: {
+//        'Content-type': 'application/json; charset=UTF-8',
+//      },
+//       body: JSON.stringify(profile)
+//      })
+//       .then((response) => response.json())
+//       .then((json) => console.log(json));
+     
+//   }

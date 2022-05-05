@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-.login-form {
+.signup-form {
     outline: 2px solid #da7b93;
-    width: 45%;
+    width: 55%;
     margin: auto;
     border-radius: 10px;
     font-size: .75em;
     background-color: #da7b93;
     font-family: raleway;
+}
+
+.log {
+    border-radius: 5px;
+    margin: 4px;
+    background-color: white;
 }

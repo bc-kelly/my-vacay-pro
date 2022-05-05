@@ -1,9 +1,9 @@
 class ProfilesController < ApplicationController
 
-    def create
-        profile = Profile.create!(profile_params)
-        session[:profile_id] = profile.id
-        render json: profile, status: :created
+      def create
+        profile = Profile.new(profile_params)
+        profile.account_id = session[:account_id]
+        profile.save
       end
     
       def show
@@ -32,7 +32,13 @@ class ProfilesController < ApplicationController
       private
     
       def profile_params
-        params.permit(:name, :image, :account_id )
+        params.permit(:name, :image )
       end
 
 end
+
+# def create
+#   profile = Profile.create!(profile_params)
+#   session[:profile_id] = profile.id
+#   render json: profile, status: :created
+# end

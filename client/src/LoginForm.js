@@ -37,20 +37,23 @@ function LoginForm({ setUser }) {
     return (
         <form className="login-form" onSubmit={handleSubmit}>
             <div>
-                <label htmlFor="email"> Email: </label>
+                <div> Login here with your email and password</div>
+                <label htmlFor="email"> </label>
                 <input
                 type="text"
                 id="email"
+                placeholder="email"
                 autoComplete="off"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 />
             </div>
             <div>
-                <label htmlFor="password"> Password: </label>
+                <label htmlFor="password"> </label>
                 <input
                 type="password"
                 id="password"
+                placeholder="password"
                 autoComplete="current-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

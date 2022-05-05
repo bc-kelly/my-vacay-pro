@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './SignUpForm.css'
 
 function SignUpForm({ setUser }) {
     const [accountName, setAccountName] = useState("");
@@ -41,49 +42,54 @@ function SignUpForm({ setUser }) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div >
+            <div className="signup-form" >
+            <div> Create your account below </div>
                 <div>
-                    <label htmlFor="account_name"> Account Name </label>
+                    <label htmlFor="account_name"> </label>
                     <input
                     type="text"
                     id="account_name"
+                    placeholder="account name"
                     autoComplete="off"
                     value={accountName}
                     onChange={(e) => setAccountName(e.target.value)}
                     />
                 </div>
                 <div>
-                    <label htmlFor="email"> Email </label>
+                    <label htmlFor="email"></label>
                     <input
                     type="text"
                     id="email"
+                    placeholder="email"
                     autoComplete="off"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
                 <div>
-                    <label htmlFor="password">Password</label>
+                    <label htmlFor="password"></label>
                     <input
                     type="password"
                     id="password"
+                    placeholder="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     autoComplete="current-password"
                     />
                 </div>
                 <div>
-                    <label htmlFor="password">Password Confirmation</label>
+                    <label htmlFor="password"> </label>
                     <input
                     type="password"
                     id="password_confirmation"
+                    placeholder="confirm your password"
                     value={passwordConfirmation}
                     onChange={(e) => setPasswordConfirmation(e.target.value)}
                     autoComplete="current-password"
                     />
                 </div>
                 <div>
-                    <button type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
+                    <button className="log" type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
                 </div>
                 <div>
                     {errors.map((err) => (

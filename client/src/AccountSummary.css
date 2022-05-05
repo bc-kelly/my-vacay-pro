@@ -16,7 +16,7 @@
 }
 
 .account-summary-card .profile-card {
-    height: 25vh;
+    height: 30vh;
     width: 20vh;
     padding: 5px;
     margin: 1% auto;
@@ -29,7 +29,7 @@
 }
 
 .account-summary-trip-card .trip-card {
-    height: 35vh;
+    height: 42vh;
     width: 20vh;
     margin: 10px;
    

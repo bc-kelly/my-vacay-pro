@@ -60,7 +60,7 @@ function App() {
       fetch(tripsAPI)
       .then(resp => resp.json())
       .then(tripsData => {
-        console.log(tripsData)
+        // console.log(tripsData)
         setTrips(tripsData)
       })
     }, [])
@@ -84,7 +84,7 @@ function App() {
         });
       }
 
-console.log(hotelTrip)
+// console.log(hotelTrip)
   return (
     <div className="App">
       <button className="see-details" onClick = {handleLogoutClick} > Logout </button>

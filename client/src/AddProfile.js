@@ -31,12 +31,12 @@ function AddProfile( ) {
         
         const name = event.target['name'].value
         const image = event.target['image'].value
-        const account_id = event.target['account_id'].value
+        // const account_id = event.target['account_id'].value
 
         const newProfile = {
             name: name,
             image: image,
-            account_id: account_id
+            // account_id: account_id
         };
         
         handleNewProfile(newProfile);
@@ -47,24 +47,24 @@ function AddProfile( ) {
 
     return (
         <div className="add-form" > 
-            Create Your Own Profile
+            <div className="create-header" >Create Your Own Profile </div>
             <form onSubmit= {handleFormSubmit}>
                     <div className="form-rows" >
-                        <label htmlFor="name">Name</label>
-                        <input id="name" type="text" placeholder="Profile Name" />
+                        <label htmlFor="name"> </label>
+                        <input className="form-control" id="name" type="text" placeholder="Profile Name" />
                     </div>
 
                     <div  className="form-rows">
-                        <label htmlFor="image">Image</label>
-                        <input id="image" type="text" placeholder="Profile Image" />
+                        <label htmlFor="image"> </label>
+                        <input className="form-control" id="image" type="text" placeholder="Profile Image" />
                     </div>
 
-                    <div  className="form-rows">
-                        <label htmlFor="account_id">Account</label>
-                        <input id="account_id" type="text" placeholder="account_id" />
-                    </div>
+                    {/* <div  className="form-rows">
+                        <label htmlFor="account_id"> </label>
+                        <input className="form-control" id="account_id" type="text" placeholder="account_id" />
+                    </div> */}
                     
-                    <input type="submit" value="Add Profile" />
+                    <input className="see-details" type="submit" value="Add Profile" />
             </form>
         </div>
 

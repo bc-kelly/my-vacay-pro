@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+.create-header{
+    font-size: 1.5em;
+    padding: 10px;
+}
 .add-form {
     height: 40%;
     width: 30%;
@@ -13,4 +17,27 @@
 
 .form-rows {
     margin: 5px;
+ 
 }
+
+.form-control {
+    border-radius: 5px;
+    width: 25vh;
+    height: 3vh;
+    text-align: center;
+}
+
+.see-details {
+    border-radius: 5px;
+    margin-bottom: 1%;
+    font-size: .8em;
+    background-color: white;
+    transition: background-color .3s;
+}
+
+.see-details:hover {
+    background-color: #da7b93;
+}
+
+
+

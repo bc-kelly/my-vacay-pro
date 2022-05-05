@@ -1,0 +1,26 @@
+.edit-profile {
+    height: 35vh;
+    width: 20vh;
+    margin-top: 2%;
+    margin: auto;
+}
+
+.container {
+    margin: 5%;
+}
+
+.edit-form {
+    background-color: white;
+    padding: 1em;
+    width: 30%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.save-btn {
+    margin: 5px;
+}
+
+.input-part {
+    margin: 5px;
+}
