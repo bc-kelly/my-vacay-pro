@@ -47,7 +47,7 @@ function MyTrips({hotelTrip}) {
             </div>
             <div className="page-divider" > </div>
         <div className="trips-section" > 
-            place posted trips here
+           <div className="posted-trips" > saved trips: </div> 
             <div className="my-trips-trip-card"> 
                 {tripCard}
             </div>

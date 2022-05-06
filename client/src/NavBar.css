@@ -10,7 +10,7 @@ a:visited{
     display: flex;
     width: 80%;
     margin: auto;
-    outline: 2px solid black;
+    outline: 2px solid #f8ec83;
     padding: 0.5em 0.5em 0.5em;
     border-radius: 5px;
     background-color: #f8ec83;
@@ -18,10 +18,71 @@ a:visited{
     color: black;
     text-decoration: none; 
     font-size: 1.25em;
+    /* box-shadow: 10px 10px 10px 10px white; */
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+   
+}
+
+/* .nav-bar .home-link {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+} */
+
+.home-link {
+    text-decoration: none;
 }
 
 .home-link:hover {
    /* font-weight: bold; */
-   box-shadow: 2px 2px 2px 2px white;
-   border-radius: 5px;
+   /* box-shadow: 2px 2px 2px 2px white;
+   border-radius: 5px; */
+   color: #9da0a3;
 }
+
+/* .nav-bar .dot {
+    width: 6px;
+    height: 6px;
+    background: #fddb3a;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .nav-bar .home-link:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+
+  .nav-bar .home-link:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(110px);
+    transform: translateX(110px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+
+  .nav-bar .home-link:nth-child(3):hover ~ .dot {
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+
+  .nav-bar .home-link:nth-child(4):hover ~ .dot {
+    -webkit-transform: translateX(285px);
+    transform: translateX(285px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  } */

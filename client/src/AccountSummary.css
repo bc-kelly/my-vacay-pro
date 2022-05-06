@@ -40,7 +40,7 @@
 
 .account-summary-trip-card {
     display: flex;
-    /* margin: auto; */
+    justify-content: center;    /* margin: auto; */
 }
 
 /* .profile-card {

@@ -22,7 +22,7 @@ function ShowHotel({addHotelToTrip}) {
       if (!hotel) return null;
     return (
         <div className="show-hotel-card" > 
-            hotel details:
+          
             <HotelCard hotel={hotel} />
             <AddToMyTripsBtn hotel={hotel} addHotelToTrip={addHotelToTrip} />
         </div>

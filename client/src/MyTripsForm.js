@@ -75,47 +75,50 @@ function MyTripsForm( {hotels, profiles}) {
     return (
         <div > 
             <form className="form" onSubmit= {handleTripFormSubmit}>
-                    <div className="form-rows" >
-                        <label htmlFor="name">Name</label>
-                        <input id="name" type="text" placeholder="Trip Name" />
-                    </div>
+                <div className="div-container">
+                    <div className="div-one">  
+                        <div className="form-rows" >
+                            <label htmlFor="name"> </label>
+                            <input className="trip-form-input"  id="trip-txt-input" type="text" placeholder="Trip Name" />
+                        </div>
 
-                    <div className="form-rows" >
-                        <label htmlFor="location">Location</label>
-                        <input id="location" type="text" placeholder="Trip Location" />
-                    </div>
+                        <div className="form-rows" >
+                            <label htmlFor="date_start"></label>
+                            <input className="trip-form-input" id="trip-txt-input" type="date" placeholder="MM/DD/YYYY" />
+                        </div>
 
-                    <div className="form-rows" >
-                        <label htmlFor="date_start">Start Date</label>
-                        <input id="date_start" type="date" placeholder="MM/DD/YYYY" />
+                        <div className="form-rows" >
+                            <label htmlFor="date_end"></label>
+                            <input className="trip-form-input" id="trip-txt-input" type="date" placeholder="MM/DD/YYYY" />
+                        </div>
                     </div>
+                    <div className="div-two">
+                        <div className="form-rows" >
+                            <label htmlFor="location"></label>
+                            <input className="trip-form-input" id="trip-txt-input" type="text" placeholder="Trip Location" />
+                        </div> 
 
-                    <div className="form-rows" >
-                        <label htmlFor="date_end">End Date</label>
-                        <input id="date_end" type="date" placeholder="MM/DD/YYYY" />
-                    </div>
+                        <div className="form-rows" >
+                            <label htmlFor="profile_id"></label>
+                            <input className="trip-form-input" id="trip-txt-input" type="text" placeholder="profile_id" />
+                        </div>
 
-                    <div className="form-rows" >
-                        <label htmlFor="profile_id">Profile</label>
-                        <input id="profile_id" type="text" placeholder="profile_id" />
+                        <div className="form-rows" >
+                            <label htmlFor="hotel_id"></label>
+                            <input className="trip-form-input" id="trip-txt-input"type="text" placeholder="hotel_id" />
+                        </div>
                     </div>
-
-                    <div className="form-rows" >
-                        <label htmlFor="hotel_id">Hotel</label>
-                        <input id="hotel_id" type="text" placeholder="hotel_id" />
-                    </div>
-                 
-                    <input type="submit" value="Save" className="see-details" />
+                </div>
+                    <input type="submit" value="Save" className="save-btn" />
             </form>
-                    <div>
+                    {/* <div>
                         <button className="see-details" 
                         // id="booked" onClick={changeBooked} 
                         > 
                             draft
                         </button>
-                    </div>
+                    </div> */}
         </div>
-
     )
 }
 

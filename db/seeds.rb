@@ -1,7 +1,15 @@
+# BASE_URL = 'https://hotels4.p.rapidapi.com/properties/list?destinationId=1506246&pageNumber=1&pageSize=25&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD'
+# ENV["KEY"]
+
+
+
+# ******** almost works 
 # require 'uri'
 # require 'net/http'
 # require 'openssl'
 # require 'pry'
+# require 'json'
+
 
 # url = URI("https://hotels4.p.rapidapi.com/properties/list?destinationId=1506246&pageNumber=1&pageSize=25&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD")
 
@@ -11,18 +19,23 @@
 
 # request = Net::HTTP::Get.new(url)
 # request["X-RapidAPI-Host"] = 'hotels4.p.rapidapi.com'
+# # ENV["KEY"]
 # request["X-RapidAPI-Key"] = '7062bef93fmshb9d6aeae3417e3fp1f3a1djsn83a764765e1c'
+# # request["X-RapidAPI-Key"] = ENV["KEY"]
 
 # response = http.request(request)
-# hotels_array = JSON.parse(response)
-# binding.pry
-
-
-# response.each do |hotel|
-#    hotel1 = Hotel.create(name: hotel["name"])
+# # binding.pry
+# h = JSON.parse(response.body)
+# # binding.pry
+# # binding.pry
+# # puts h.map {|x| x.values[0]}
+# h.each do |hotel|
+#    Hotel.create(name: hotel['data']['body']['searchResults']['results']['name'])
 #    binding.pry
 # end
 # puts response.read_body
+
+# ******** almost works ^^
 
 
 
@@ -49,13 +62,6 @@
 # binding.pry
 
 # puts response.read_body
-
-
-
-
-
-
-
 
 
 puts "Deleting old data..."

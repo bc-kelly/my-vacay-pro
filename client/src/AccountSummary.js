@@ -5,9 +5,21 @@ import TripCard from './TripCard'
 import './AccountSummary.css';
 
 const tripsAPI = '/trips';
+const profilesAPI = '/profiles';
 
-function AccountSummary({profiles, hotelTrip}) {
+function AccountSummary({ hotelTrip}) {
     const [trips, setTrips] = useState([]);
+    const [profiles, setProfiles] = useState([]);
+
+    useEffect(()=>{
+        fetch(profilesAPI)
+        .then(resp => resp.json())
+        .then(profilesData => {
+          // console.log(profilesData)
+          setProfiles(profilesData)
+        })
+      }, []) 
+
 
     const profileCard = profiles.map(profile => {
         // console.log(profile)
