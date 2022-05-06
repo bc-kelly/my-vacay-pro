@@ -14,7 +14,7 @@ import EditProfile from "./EditProfile";
 import './App.css';
 
 const hotelsAPI = '/hotels';
-const profilesAPI = '/profiles';
+// const profilesAPI = '/profiles';
 const tripsAPI = '/trips';
 
 function App() {
@@ -47,14 +47,14 @@ function App() {
       })
     }, [])
 
-    useEffect(()=>{
-      fetch(profilesAPI)
-      .then(resp => resp.json())
-      .then(profilesData => {
-        // console.log(profilesData)
-        setProfiles(profilesData)
-      })
-    }, [])
+    // useEffect(()=>{
+    //   fetch(profilesAPI)
+    //   .then(resp => resp.json())
+    //   .then(profilesData => {
+    //     // console.log(profilesData)
+    //     setProfiles(profilesData)
+    //   })
+    // }, [])
     //move to profiles component ,same with the trips fetch 
 
     useEffect(()=>{
@@ -94,7 +94,7 @@ function App() {
                 <Route exact path ="/" element= { <Home setUser={setUser} /> } /> 
                 <Route path ="/browse" element= { <Browse hotels={hotels} addHotelToTrip={addHotelToTrip} /> } /> 
                 <Route path ="/accountsummary" element= { <AccountSummary profiles={profiles} hotelTrip={hotelTrip} trips={trips} /> } />
-                <Route path ="/profiles" element= { <Profiles profiles={profiles} /> } /> 
+                <Route path ="/profiles" element= { <Profiles /> } /> 
                 <Route path ="/mytrips" element= { <MyTrips trips={trips} hotels={hotels} hotelTrip={hotelTrip} /> } /> 
                 <Route path ="/showhotel/:id" element= { <ShowHotel addHotelToTrip={addHotelToTrip} /> } />
                 <Route path ="/login" element= { <Login setUser={setUser} /> } />

@@ -1,9 +1,21 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import ProfileCard from './ProfileCard'
 import './Profiles.css';
 
+const profilesAPI = '/profiles';
 
-function Profiles({profiles}) {
+function Profiles() {
+    const [profiles, setProfiles] = useState([]);
+
+    useEffect(()=>{
+        fetch(profilesAPI)
+        .then(resp => resp.json())
+        .then(profilesData => {
+          // console.log(profilesData)
+          setProfiles(profilesData)
+        })
+      }, []) 
+
     // const [formData, setFormData] = useState ({
     //     profile_id: "",
     // });
