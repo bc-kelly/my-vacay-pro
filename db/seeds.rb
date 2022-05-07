@@ -1,8 +1,9 @@
 # BASE_URL = 'https://hotels4.p.rapidapi.com/properties/list?destinationId=1506246&pageNumber=1&pageSize=25&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD'
 # ENV["KEY"]
 
+Hotel.destroy_all
 
-
+puts "🌱 Creating hotels..."
 # ******** almost works 
 require 'uri'
 require 'net/http'
@@ -36,7 +37,8 @@ bridgets_hotel_data =  JSON.parse(response.read_body)
 # bridgets_hotel_data['data']['body']['searchResults']['results']
 
 bridgets_hotel_data['data']['body']['searchResults']['results'].each do |hotel|
-    Hotel.create(name: hotel['name'])
+    binding.pry
+    Hotel.create(name: hotel['name'], city: hotel['address']['locality'], state: hotel['address']['region'])
 end
 # puts response.read_body
 
@@ -76,15 +78,15 @@ end
 # Profile.destroy_all
 
 
-# puts "🌱 Creating accounts..."
+puts "🌱 Creating accounts..."
 
-# Account.create(account_name: "bridget", email:"bridget@gmail.com", password: "bridget")
+Account.create(account_name: "bridget", email:"bridget@gmail.com", password: "bridget")
 
 
-# puts "🌱 Creating profiles..."
+puts "🌱 Creating profiles..."
 
-# Profile.create(name: "profile1", image: "https://st4.depositphotos.com/1012074/25277/v/600/depositphotos_252773324-stock-illustration-young-avatar-face-with-sunglasses.jpg", account_id: 1 )
-# Profile.create(name: "profile2", image: "https://st2.depositphotos.com/1007566/11574/v/950/depositphotos_115748664-stock-illustration-young-executive-woman-profile-icon.jpg", account_id: 1 )
+Profile.create(name: "profile1", image: "https://st4.depositphotos.com/1012074/25277/v/600/depositphotos_252773324-stock-illustration-young-avatar-face-with-sunglasses.jpg", account_id: 1 )
+Profile.create(name: "profile2", image: "https://st2.depositphotos.com/1007566/11574/v/950/depositphotos_115748664-stock-illustration-young-executive-woman-profile-icon.jpg", account_id: 1 )
 
 
 # puts "🌱 Creating hotels..."
@@ -114,4 +116,4 @@ end
 # puts "🌱 Creating trips..."
 # Trip.create(name: "Girls Trip", location: "NYC", date_start: "05/15/2022", date_end: "06/15/2022", points: 100, profile_id: 1, hotel_id: 1, booked: false )
 
-# puts "Done seeding!" 
+puts "Done seeding!" 

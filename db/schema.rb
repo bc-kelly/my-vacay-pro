@@ -25,11 +25,12 @@ ActiveRecord::Schema.define(version: 2022_05_04_191447) do
 
   create_table "hotels", force: :cascade do |t|
     t.string "name"
-    t.string "city_state"
+    t.string "image"
+    t.string "city"
+    t.string "state"
     t.string "tag"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "image"
   end
 
   create_table "profiles", force: :cascade do |t|
