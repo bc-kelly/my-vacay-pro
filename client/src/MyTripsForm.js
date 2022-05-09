@@ -1,13 +1,15 @@
-import React, { useState }from "react";
+import React, { useState, useEffect }from "react";
 import './MyTripsForm.css'
 
 const tripsAPI = '/trips';
+const profilesAPI = '/profiles';
 
-function MyTripsForm( {hotels, profiles, hotel}) {
+function MyTripsForm( {hotels, hotel}) {
 
     // let tripBooked = document.querySelector('#booked')
 
     const [trips, setTrips] = useState([]);
+    const [profiles, setProfiles] = useState([]);
     // const [formData, setFormData] = useState ({
     //     name: "",
     //     location: "",
@@ -17,14 +19,22 @@ function MyTripsForm( {hotels, profiles, hotel}) {
     //     hotel_id: ""
     // });
 
+    useEffect(()=>{
+        fetch(profilesAPI)
+        .then(resp => resp.json())
+        .then(profilesData => {
+        //   console.log(profilesData)
+          setProfiles(profilesData)
+        })
+      }, [])
 
-
-    // function handleChange(event) {
-    //     setFormData({
-    //         ...formData,
-    //         [event.target.name]: event.target.value,
-    //     });
-    // }
+    function handleChange(event) {
+        setTrips({
+            ...trips,
+            [event.target.name]: event.target.value,
+            
+        });
+    }
 
     function handleNewTrip(trip){
         fetch(tripsAPI, {
@@ -44,6 +54,7 @@ function MyTripsForm( {hotels, profiles, hotel}) {
     }
 
     function handleTripFormSubmit(event){ 
+        console.log(event.target)
         event.preventDefault()
         
         const name = event.target['name'].value
@@ -51,8 +62,8 @@ function MyTripsForm( {hotels, profiles, hotel}) {
         const date_start = event.target['date_start'].value
         const date_end = event.target['date_end'].value
         const profile_id = event.target['profile_id'].value
-        const hotel_id = hotel.hotel_id
-        // const hotel_id = event.target['hotel_id'].value
+        // const hotel_id = hotel.hotel_id
+        const hotel_id = event.target['hotel_id'].value
         
 
         const newTrip = {
@@ -71,7 +82,7 @@ function MyTripsForm( {hotels, profiles, hotel}) {
     }
 
   
-
+// console.log(profiles)
 // console.log(hotel.id)
     return (
         <div > 
@@ -80,34 +91,50 @@ function MyTripsForm( {hotels, profiles, hotel}) {
                     <div className="div-one">  
                         <div className="form-rows" >
                             <label htmlFor="name"> </label>
-                            <input className="trip-form-input"  id="trip-txt-input" type="text" placeholder="Trip Name" />
+                            <input className="trip-form-input"  id="name" type="text" placeholder="Trip Name" />
                         </div>
 
                         <div className="form-rows" >
                             <label htmlFor="date_start"></label>
-                            <input className="trip-form-input" id="trip-txt-input" type="date" placeholder="MM/DD/YYYY" />
+                            <input className="trip-form-input" id="date_start" type="date" placeholder="MM/DD/YYYY" />
                         </div>
 
                         <div className="form-rows" >
                             <label htmlFor="date_end"></label>
-                            <input className="trip-form-input" id="trip-txt-input" type="date" placeholder="MM/DD/YYYY" />
+                            <input className="trip-form-input" id="date_end" type="date" placeholder="MM/DD/YYYY" />
                         </div>
                     </div>
                     <div className="div-two">
                         <div className="form-rows" >
                             <label htmlFor="location"></label>
-                            <input className="trip-form-input" id="trip-txt-input" type="text" placeholder="Trip Location" />
+                            <input className="trip-form-input" id="location" type="text" placeholder="Trip Location" />
                         </div> 
 
                         <div className="form-rows" >
                             <label htmlFor="profile_id"></label>
-                            <input className="trip-form-input" id="trip-txt-input" type="text" placeholder="profile_id" />
+                            {/* <input className="trip-form-input" id="trip-txt-input" type="text" placeholder="profile_id" /> */}
+                            <select 
+                                className="trip-form-input" 
+                                id="profile_id" 
+                                type="text" 
+                                placeholder="profile_id" 
+                                onChange={handleChange}
+                                value={trips.profile_id}>
+                                    <option    className="trip-form-input" 
+                                id="profile_id" > Select Profile </option>
+                                        {profiles.map(profile => (
+                                        // console.log("User:", user)
+                                        <option key={profile.id} value={profile.id}>
+                                            {profile.name} 
+                                        </option>
+                                        ))} 
+                            </select>
                         </div>
 
                         <div className="form-rows" >
                             <label htmlFor="hotel_id"></label>
                             
-                            <input readonly value={hotel.id} className="trip-form-input" id="trip-txt-input"type="text" placeholder="hotel_id" />
+                            <input readonly value={hotel.id} className="trip-form-input" id="hotel_id"type="text" placeholder="hotel_id" />
                         </div>
                     </div>
                 </div>

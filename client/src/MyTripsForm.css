@@ -28,7 +28,27 @@ input[class="trip-form-input"]{
     transition: 0.2s linear;
     
 }
-input[id="trip-txt-input"] {
+input[id="name"] {
+    width: 250px;
+    text-align: center;
+}
+input[id="location"] {
+    width: 250px;
+    text-align: center;
+}
+input[id="date_start"] {
+    width: 250px;
+    text-align: center;
+}
+input[id="date_end"] {
+    width: 250px;
+    text-align: center;
+}
+input[id="hotel_id"] {
+    width: 250px;
+    text-align: center;
+}
+input[id="profile_id"] {
     width: 250px;
     text-align: center;
 }

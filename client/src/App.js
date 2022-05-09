@@ -23,7 +23,7 @@ function App() {
   const [user, setUser] = useState(null);
   // console.log(`is ${setUser}`)
   const [hotels, setHotels] = useState([]);
-  const [profiles, setProfiles] = useState([]);
+  // const [profiles, setProfiles] = useState([]);
   const [trips, setTrips] = useState([]);
   const [hotelTrip, setHotelTrip] = useState([]);
 
@@ -51,7 +51,7 @@ function App() {
     //   fetch(profilesAPI)
     //   .then(resp => resp.json())
     //   .then(profilesData => {
-    //     // console.log(profilesData)
+    //     console.log(profilesData)
     //     setProfiles(profilesData)
     //   })
     // }, [])
@@ -85,7 +85,7 @@ function App() {
         });
       }
 
-// console.log(hotelTrip)
+// console.log(profiles)
   return (
     <div className="App">
       <button className="logout-btn" onClick = {handleLogoutClick} > Logout </button>
@@ -93,13 +93,17 @@ function App() {
           <Routes>
                 <Route exact path ="/" element= { <Home setUser={setUser} /> } /> 
                 <Route path ="/browse" element= { <Browse hotels={hotels} addHotelToTrip={addHotelToTrip} /> } /> 
-                <Route path ="/accountsummary" element= { <AccountSummary profiles={profiles} hotelTrip={hotelTrip} trips={trips} /> } />
+                <Route path ="/accountsummary" element= { <AccountSummary 
+                // profiles={profiles} 
+                hotelTrip={hotelTrip} trips={trips} /> } />
                 <Route path ="/profiles" element= { <Profiles /> } /> 
                 <Route path ="/mytrips" element= { <MyTrips trips={trips} hotels={hotels} hotelTrip={hotelTrip} /> } /> 
                 <Route path ="/showhotel/:id" element= { <ShowHotel addHotelToTrip={addHotelToTrip} /> } />
                 <Route path ="/login" element= { <Login setUser={setUser} /> } />
                 <Route path ="/addprofile" element= { <AddProfile /> } />
-                <Route path ="/mytripsform" element= { <MyTripsForm hotels={hotels} profiles={profiles} /> } />
+                <Route path ="/mytripsform" element= { <MyTripsForm hotels={hotels} 
+                // profiles={profiles} 
+                /> } />
                 <Route path ="/editprofile/:id" element= { <EditProfile /> } />
           </Routes>
     </div>

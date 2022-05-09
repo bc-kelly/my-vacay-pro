@@ -10,7 +10,7 @@ function Browse({hotels, addHotelToTrip}) {
     const [searchText, setSearchText] = useState("");
 
     const filterAllHotels = hotels.filter(function (hotel) {
-        return hotel.name.toLowerCase().includes(searchText.toLowerCase()) || hotel.city_state.toLowerCase().includes(searchText.toLowerCase())
+        return hotel.name.toLowerCase().includes(searchText.toLowerCase()) || hotel.city.toLowerCase().includes(searchText.toLowerCase()) || hotel.state.toLowerCase().includes(searchText.toLowerCase())
     })
 
     function handleSearchText (event) {

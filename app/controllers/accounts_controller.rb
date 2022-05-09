@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  # skip_before_action :authorize, only: :create
+  skip_before_action :authorize, only: :create
 
     def create
         account = Account.create!(account_params)

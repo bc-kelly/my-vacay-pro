@@ -13,14 +13,14 @@ function MyTrips({hotelTrip}) {
         fetch(tripsAPI)
         .then(resp => resp.json())
         .then(tripsData => {
-          console.log(tripsData)
+        //   console.log(tripsData)
           setTrips(tripsData)
         })
       }, [])
 
 
     const tripCard = trips.map(trip => {
-        console.log(trips)
+        // console.log(trips)
         return (
         <div> 
             <TripCard key={trip.id} trip={trip} />

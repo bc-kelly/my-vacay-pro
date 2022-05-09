@@ -54,7 +54,8 @@ function Profiles() {
             </label>
           </form> */}
             <div className="profile" >   
-                {profileCard}
+                {/* {profileCard} */}
+                {profiles.length > 0 ? profileCard : <h1> Please create a profile </h1>}
             </div>
 
             <div> 

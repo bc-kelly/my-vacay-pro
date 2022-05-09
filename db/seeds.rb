@@ -2,6 +2,8 @@
 # ENV["KEY"]
 
 Hotel.destroy_all
+Account.destroy_all
+Profile.destroy_all
 
 puts "🌱 Creating hotels..."
 # ******** almost works 
@@ -12,7 +14,7 @@ require 'pry'
 require 'json'
 
 
-url = URI("https://hotels4.p.rapidapi.com/properties/list?destinationId=1506246&pageNumber=$1&pageSize=25&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD")
+url = URI('https://hotels4.p.rapidapi.com/properties/list?destinationId=1506246&pageNumber=1&pageSize=25&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD')
 
 http = Net::HTTP.new(url.host, url.port)
 http.use_ssl = true
@@ -25,25 +27,68 @@ request["X-RapidAPI-Key"] = '7062bef93fmshb9d6aeae3417e3fp1f3a1djsn83a764765e1c'
 # request["X-RapidAPI-Key"] = ENV["KEY"]
 
 response = http.request(request)
-# binding.pry
 h = JSON.parse(response.body)
-binding.pry
-# binding.pry
-# puts h.map {|x| x.values[0]}
 
 bridgets_hotel_data =  JSON.parse(response.read_body)
-# p bridgets_hotel_data['data']['body']['searchResults']['results']
-
 # bridgets_hotel_data['data']['body']['searchResults']['results']
-
 bridgets_hotel_data['data']['body']['searchResults']['results'].each do |hotel|
-    binding.pry
+    # binding.pry
     Hotel.create(name: hotel['name'], city: hotel['address']['locality'], state: hotel['address']['region'])
 end
+
 # puts response.read_body
 
 # ******** almost works ^^
 
+
+# puts "🌱 Creating hotels two..."
+# # ******** almost works 
+# require 'uri'
+# require 'net/http'
+# require 'openssl'
+# require 'pry'
+# require 'json'
+
+
+# urltwo = URI('https://hotels4.p.rapidapi.com/properties/list?destinationId=1506246&pageNumber=7&pageSize=25&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD')
+
+# http = Net::HTTP.new(urltwo.host, urltwo.port)
+# http.use_ssl = true
+# http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+# request = Net::HTTP::Get.new(url)
+# request["X-RapidAPI-Host"] = 'hotels4.p.rapidapi.com'
+# # ENV["KEY"]
+# request["X-RapidAPI-Key"] = '7062bef93fmshb9d6aeae3417e3fp1f3a1djsn83a764765e1c'
+# # request["X-RapidAPI-Key"] = ENV["KEY"]
+
+# responseTwo = http.request(request)
+# hTwo = JSON.parse(responseTwo.body)
+
+# hotel_data_two =  JSON.parse(responseTwo.read_body)
+# hotel_data_two['data']['body']['searchResults']['results'].each do |hotelTwo|
+#     Hotel.create(name: hotelTwo['name'], city: hotelTwo['address']['locality'], state: hotelTwo['address']['region'])
+# end
+
+
+
+
+# require 'uri'
+# require 'net/http'
+# require 'openssl'
+
+# url = URI("https://hotels4.p.rapidapi.com/properties/get-hotel-photos?id=1178275040")
+
+# http = Net::HTTP.new(url.host, url.port)
+# http.use_ssl = true
+# http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+# request = Net::HTTP::Get.new(url)
+# request["X-RapidAPI-Host"] = 'hotels4.p.rapidapi.com'
+# request["X-RapidAPI-Key"] = '7062bef93fmshb9d6aeae3417e3fp1f3a1djsn83a764765e1c'
+
+# response = http.request(request)
+# puts response.read_body
 
 
 
@@ -113,7 +158,7 @@ Profile.create(name: "profile2", image: "https://st2.depositphotos.com/1007566/1
 # Hotel.create(name: "Hayes Street Hotel Nashville", city_state: "Nashville, Teneessee", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/99411314.webp?k=59b9fe3bc941eb2f22ccb72449401a8796a436b2b2614b024a139fcd45e35dcd&o=&s=1")
 # Hotel.create(name: "Hutton Hotel", city_state: "Nashville, Teneessee", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/318874840.webp?k=f60954891e7e868b7bb15c60c0c34ebae1bbcd3084dc072d4eb251bacc71cc1c&o=&s=1")
 
-# puts "🌱 Creating trips..."
-# Trip.create(name: "Girls Trip", location: "NYC", date_start: "05/15/2022", date_end: "06/15/2022", points: 100, profile_id: 1, hotel_id: 1, booked: false )
+puts "🌱 Creating trips..."
+Trip.create(name: "Girls Trip", location: "NYC", date_start: "05/15/2022", date_end: "06/15/2022", points: 100, profile_id: 1, hotel_id: 1, booked: false, account_id: 1)
 
 puts "Done seeding!" 
