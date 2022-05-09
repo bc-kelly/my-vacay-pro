@@ -12,7 +12,7 @@ require 'pry'
 require 'json'
 
 
-url = URI("https://hotels4.p.rapidapi.com/properties/list?destinationId=1506246&pageNumber=1&pageSize=25&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD")
+url = URI("https://hotels4.p.rapidapi.com/properties/list?destinationId=1506246&pageNumber=$1&pageSize=25&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD")
 
 http = Net::HTTP.new(url.host, url.port)
 http.use_ssl = true
@@ -27,7 +27,7 @@ request["X-RapidAPI-Key"] = '7062bef93fmshb9d6aeae3417e3fp1f3a1djsn83a764765e1c'
 response = http.request(request)
 # binding.pry
 h = JSON.parse(response.body)
-# binding.pry
+binding.pry
 # binding.pry
 # puts h.map {|x| x.values[0]}
 

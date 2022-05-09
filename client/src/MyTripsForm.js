@@ -3,7 +3,7 @@ import './MyTripsForm.css'
 
 const tripsAPI = '/trips';
 
-function MyTripsForm( {hotels, profiles}) {
+function MyTripsForm( {hotels, profiles, hotel}) {
 
     // let tripBooked = document.querySelector('#booked')
 
@@ -51,7 +51,8 @@ function MyTripsForm( {hotels, profiles}) {
         const date_start = event.target['date_start'].value
         const date_end = event.target['date_end'].value
         const profile_id = event.target['profile_id'].value
-        const hotel_id = event.target['hotel_id'].value
+        const hotel_id = hotel.hotel_id
+        // const hotel_id = event.target['hotel_id'].value
         
 
         const newTrip = {
@@ -71,7 +72,7 @@ function MyTripsForm( {hotels, profiles}) {
 
   
 
-
+// console.log(hotel.id)
     return (
         <div > 
             <form className="form" onSubmit= {handleTripFormSubmit}>
@@ -105,7 +106,8 @@ function MyTripsForm( {hotels, profiles}) {
 
                         <div className="form-rows" >
                             <label htmlFor="hotel_id"></label>
-                            <input className="trip-form-input" id="trip-txt-input"type="text" placeholder="hotel_id" />
+                            
+                            <input readonly value={hotel.id} className="trip-form-input" id="trip-txt-input"type="text" placeholder="hotel_id" />
                         </div>
                     </div>
                 </div>

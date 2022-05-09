@@ -35,7 +35,9 @@ function MyTrips({hotelTrip}) {
             key={addedHotel.id} 
             hotel={addedHotel}
             />
-            <MyTripsForm />
+            <MyTripsForm 
+            key={addedHotel.id} 
+            hotel={addedHotel} />
         </div>
         )
     })
