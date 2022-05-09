@@ -1,42 +1,93 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .create-header{
-    font-size: 1.5em;
+    font-size: 2em;
     padding: 10px;
+    margin: 5px;
+    color: #70767c;
 }
 .add-form {
-    height: 40%;
-    width: 30%;
+    outline: 2px solid #f8ec83;
+    width: 50%;
     margin: 5% auto;
-    background-color: white;
-    outline: 2px solid white;
     border-radius: 10px;
-    padding: 5px;
-    font-family: 'Raleway';
+    font-size: .75em;
+    background-color: #f8ec83;
+    font-family: raleway;
+    padding: 10px;
+    
 }
 
-.form-rows {
-    margin: 5px;
- 
-}
-
-.form-control {
+.add-profile-btn {
+    display: inline-block;
+    color: #252537;
+  
+    width: 220px;
+    height: 60px;
+  
+    padding: 0 20px;
+    background: white;
     border-radius: 5px;
-    width: 25vh;
-    height: 3vh;
+    
+    outline: none;
+    border: none;
+  
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    
+    margin: 5% auto;
+    letter-spacing: 0.05em;
+}
+
+.add-rpofile-btn:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
+/* buttons hover Animation */
+.add-profile-btn:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+input[class="form-input"]{
+    width: 35%;
+    height: 10%;
+  
+    margin-top: 2%;
+    padding: 4%;
+    
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #5E6472;
+  
+    outline: none;
+    border: none;
+  
+    border-radius: 5px 5px 5px 5px;
+    transition: 0.2s linear;
+}
+
+input[id="name"] {
+    width: 250px;
     text-align: center;
 }
-
-.see-details {
-    border-radius: 5px;
-    margin-bottom: 1%;
-    font-size: .8em;
-    background-color: white;
-    transition: background-color .3s;
+input[id="image"] {
+    width: 250px;
+    text-align: center;
 }
-
-.see-details:hover {
-    background-color: #da7b93;
+/* focus  */
+input:focus {
+    transform: translateX(-2px);
+    border-radius: 5px;
 }
 
 

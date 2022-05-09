@@ -41,7 +41,7 @@ function AddProfile( ) {
         
         handleNewProfile(newProfile);
         console.log(newProfile)
-        // navigate("./profiles");
+        // navigate("http://localhost:4000/profiles");
         event.target.reset();
     }
 
@@ -49,14 +49,14 @@ function AddProfile( ) {
         <div className="add-form" > 
             <div className="create-header" >Create Your Own Profile </div>
             <form onSubmit= {handleFormSubmit}>
-                    <div className="form-rows" >
+                    <div >
                         <label htmlFor="name"> </label>
-                        <input className="form-control" id="name" type="text" placeholder="Profile Name" />
+                        <input className="form-input" id="name" type="text" placeholder="Profile Name" />
                     </div>
 
-                    <div  className="form-rows">
+                    <div>
                         <label htmlFor="image"> </label>
-                        <input className="form-control" id="image" type="text" placeholder="Profile Image" />
+                        <input className="form-input" id="image" type="text" placeholder="Profile Image" />
                     </div>
 
                     {/* <div  className="form-rows">
@@ -64,7 +64,7 @@ function AddProfile( ) {
                         <input className="form-control" id="account_id" type="text" placeholder="account_id" />
                     </div> */}
                     
-                    <input className="see-details" type="submit" value="Add Profile" />
+                    <input className="add-profile-btn" type="submit" value="Add Profile" />
             </form>
         </div>
 
