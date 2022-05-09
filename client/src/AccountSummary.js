@@ -69,7 +69,7 @@ function AccountSummary({ hotelTrip}) {
                     {profileCard}
                 </div>
 
-                <div>show posted trips here</div>
+                <div className="show-trips-header" > posted trips: </div>
 
                 <div className="account-summary-trip-card" > 
                     {/* {showAddedHotel} */}

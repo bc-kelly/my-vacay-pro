@@ -31,6 +31,12 @@
     padding: 2px;
 }
 
+.show-trips-header {
+    font-family: Raleway;
+    font-size: 2em;
+    color: white;
+}
+
 .account-summary-trip-card .trip-card {
     height: 42vh;
     width: 20vh;
