@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .login-form {
-    outline: 2px solid #f8ec83;
+    outline: 2px solid #00FFFF;
     width: 70%;
     margin: auto;
     border-radius: 10px;
     font-size: .75em;
-    background-color: #f8ec83;
+    background-color: #00FFFF;
+    /* background-color: #f8ec83; */
     font-family: raleway;
 }
 
 .login-header {
     margin: 5px;
     padding: 10px;
-    color: #70767c;
+    color: #363636;
 }
 
 input[class="form-input"]{
@@ -64,6 +65,7 @@ input:focus {
     
     margin: 7% auto;
     letter-spacing: 0.05em;
+    font-size: .75em;
 }
 
 .login-btn:hover {

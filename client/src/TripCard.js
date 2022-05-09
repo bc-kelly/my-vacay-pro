@@ -35,8 +35,6 @@ function TripCard( {trip}) {
     //   });
     // }
 
-
-
     return (
         <div className="trip-card" > 
             <h3 className="profile-name" > {trip.profile.name} </h3>

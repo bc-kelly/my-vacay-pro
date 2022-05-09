@@ -20,7 +20,6 @@ function AccountSummary({ hotelTrip}) {
         })
       }, []) 
 
-
     const profileCard = profiles.map(profile => {
         // console.log(profile)
         return <ProfileCard key={profile.id} profile={profile} />
@@ -47,9 +46,8 @@ function AccountSummary({ hotelTrip}) {
         })
       }, [])
 
-
     const tripCard = trips.map(trip => {
-        // console.log(trips)
+        console.log(trip.points)
         return (
         <div> 
             <TripCard key={trip.id} trip={trip} />
@@ -60,7 +58,7 @@ function AccountSummary({ hotelTrip}) {
     return (
         <div> 
             <div className="points-summary"> 
-                Points Summary: XXX 
+                Points Summary: XXX
             </div>
 
                 <div className="account-summary" > 

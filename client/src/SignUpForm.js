@@ -48,7 +48,7 @@ function SignUpForm({ setUser }) {
                 <div>
                     <label htmlFor="account_name"> </label>
                     <input
-                    className="form-input"
+                    className="su-form-input"
                     type="text"
                     id="txt-input"
                     placeholder="account name"
@@ -60,7 +60,7 @@ function SignUpForm({ setUser }) {
                 <div>
                     <label htmlFor="email"></label>
                     <input
-                    className="form-input"
+                    className="su-form-input"
                     type="text"
                     id="txt-input"
                     placeholder="email"
@@ -72,7 +72,7 @@ function SignUpForm({ setUser }) {
                 <div>
                     <label htmlFor="password"></label>
                     <input
-                    className="form-input"
+                    className="su-form-input"
                     type="password"
                     id="txt-input"
                     placeholder="password"
@@ -84,7 +84,7 @@ function SignUpForm({ setUser }) {
                 <div>
                     <label htmlFor="password"> </label>
                     <input
-                    className="form-input"
+                    className="su-form-input"
                     type="password"
                     id="txt-input"
                     placeholder="confirm your password"

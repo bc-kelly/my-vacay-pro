@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .signup-form {
-    outline: 2px solid #f8ec83;
-    width: 55%;
+    outline: 2px solid #00ffff;
+    width: 65%;
     margin: auto;
     border-radius: 10px;
     font-size: .75em;
-    background-color: #f8ec83;
+    background-color: #00ffff;
     font-family: raleway;
 }
 
@@ -18,4 +18,36 @@
 
 .create-account-header {
     padding: 10px;
+}
+
+input[class="su-form-input"]{
+    width: 45%;
+    height: 10%;
+  
+    margin-top: 2%;
+    padding: 4%;
+    
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #363636;
+  
+    outline: none;
+    border: none;
+  
+    border-radius: 5px 5px 5px 5px;
+    transition: 0.2s linear;
+}
+
+input[id="name"] {
+    width: 250px;
+    text-align: center;
+}
+input[id="image"] {
+    width: 250px;
+    text-align: center;
+}
+/* focus  */
+input:focus {
+    transform: translateX(-2px);
+    border-radius: 5px;
 }

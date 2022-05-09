@@ -10,10 +10,12 @@ a:visited{
     display: flex;
     width: 80%;
     margin: auto;
-    outline: 2px solid #f8ec83;
+    outline: 2px solid #00FFFF;
+    /* outline: 2px solid #f8ec83; */
     padding: 0.5em 0.5em 0.5em;
     border-radius: 5px;
-    background-color: #f8ec83;
+    background-color: #00FFFF;
+    /* background-color: #f8ec83; */
     font-family: Raleway;
     color: black;
     text-decoration: none; 

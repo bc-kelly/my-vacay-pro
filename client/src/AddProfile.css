@@ -4,15 +4,15 @@
     font-size: 2em;
     padding: 10px;
     margin: 5px;
-    color: #70767c;
+    color: #363636;
 }
 .add-form {
-    outline: 2px solid #f8ec83;
+    outline: 2px solid #00ffff;
     width: 50%;
     margin: 5% auto;
     border-radius: 10px;
     font-size: .75em;
-    background-color: #f8ec83;
+    background-color: #00ffff;
     font-family: raleway;
     padding: 10px;
     
