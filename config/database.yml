@@ -81,6 +81,15 @@ test:
 #
 production:
   <<: *default
-  database: react_rails_api_project_template_production
-  username: react_rails_api_project_template
-  password: <%= ENV['REACT_RAILS_API_PROJECT_TEMPLATE_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_URL'] %>
+  # username: react_rails_api_project_template
+  # password: <%= ENV['REACT_RAILS_API_PROJECT_TEMPLATE_DATABASE_PASSWORD'] %>
+
+
+
+# what is was before i deployed down below
+  # production:
+  # <<: *default
+  # database: react_rails_api_project_template_production
+  # username: react_rails_api_project_template
+  # password: <%= ENV['REACT_RAILS_API_PROJECT_TEMPLATE_DATABASE_PASSWORD'] %>
