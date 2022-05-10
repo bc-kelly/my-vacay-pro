@@ -80,13 +80,13 @@ input[class="form-input"]{
 input[id="name"] {
     width: 250px;
     text-align: center;
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     color: #363636;
 }
 input[id="image"] {
     width: 250px;
     text-align: center;
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     color: #363636;
 }
 /* focus  */
