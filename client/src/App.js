@@ -12,6 +12,7 @@ import AddProfile from "./AddProfile";
 import MyTripsForm from "./MyTripsForm";
 import EditProfile from "./EditProfile";
 import SendEmail from "./SendEmail";
+import Swal from 'sweetalert2'
 import './App.css';
 
 const hotelsAPI = '/hotels';
@@ -20,6 +21,7 @@ const tripsAPI = '/trips';
 
 function App() {
 
+  const Swal = require('sweetalert2')
   let navigate = useNavigate();
   const [user, setUser] = useState(null);
   // console.log(`is ${setUser}`)
@@ -73,6 +75,22 @@ function App() {
         if (!hotelTrip.includes(item)) {
             setHotelTrip([...hotelTrip, item])
         }
+        Swal.fire({
+          title: 'Added!',
+          // text: 'Do you want to continue',
+          icon: 'success',
+          timer: 1500,
+          confirmButtonText: 'Cool',
+          showConfirmButton: false
+        }).then(
+          function () {},
+          // handling the promise rejection
+          function (dismiss) {
+            if (dismiss === 'timer') {
+              //console.log('I was closed by the timer')
+            }
+          }
+        )
     }
 
     function handleLogoutClick() {
