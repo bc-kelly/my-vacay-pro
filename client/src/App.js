@@ -11,6 +11,7 @@ import Login from "./Login";
 import AddProfile from "./AddProfile";
 import MyTripsForm from "./MyTripsForm";
 import EditProfile from "./EditProfile";
+import SendEmail from "./SendEmail";
 import './App.css';
 
 const hotelsAPI = '/hotels';
@@ -105,6 +106,7 @@ function App() {
                 // profiles={profiles} 
                 /> } />
                 <Route path ="/editprofile/:id" element= { <EditProfile /> } />
+                <Route path ="/sendemail" element= { <SendEmail /> } />
           </Routes>
     </div>
   );

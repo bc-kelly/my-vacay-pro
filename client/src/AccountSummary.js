@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import ProfileCard from './ProfileCard'
-import HotelCard from './HotelCard'
+// import HotelCard from './HotelCard'
 import TripCard from './TripCard'
+import SendEmailBtn from './SendEmailBtn'
 import './AccountSummary.css';
 
 const tripsAPI = '/trips';
@@ -57,10 +58,13 @@ function AccountSummary({ hotelTrip}) {
 
     return (
         <div> 
+           
             <div className="points-summary"> 
                 Points Summary: XXX
             </div>
-
+            <div > 
+                <SendEmailBtn />
+            </div>
                 <div className="account-summary" > 
                     An overview of your account:
                 </div>

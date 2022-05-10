@@ -87,7 +87,9 @@ end
 # request["X-RapidAPI-Host"] = 'hotels4.p.rapidapi.com'
 # request["X-RapidAPI-Key"] = '7062bef93fmshb9d6aeae3417e3fp1f3a1djsn83a764765e1c'
 
-# response = http.request(request)
+# responsePic = http.request(request)
+# j = JSON.parse(responsePic.body)
+# hotel_pics =  JSON.parse(responsePic.read_body)
 # puts response.read_body
 
 
