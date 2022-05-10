@@ -40,7 +40,7 @@ function LoginForm({ setUser }) {
                 <div className="login-header" > Login here with your email and password</div>
                 <label htmlFor="email"> </label>
                 <input
-                className="form-input"
+                className="login-form-input"
                 type="text"
                 id="txt-input"
                 placeholder="email"
@@ -52,7 +52,7 @@ function LoginForm({ setUser }) {
             <div>
                 <label htmlFor="password"> </label>
                 <input
-                className="form-input"
+                className="login-form-input"
                 type="password"
                 id="txt-input"
                 placeholder="password"

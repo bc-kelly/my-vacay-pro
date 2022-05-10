@@ -9,7 +9,6 @@
     max-width: 25vh;
     min-height: 25vh;
     padding: 5px;
-    
 }
 
 .hotel-card {
@@ -20,4 +19,12 @@
 .hotel-name {
     font-family: Raleway;
     font-size: 1.5em;
+}
+
+.hotel-city {
+    margin: 1%;
+}
+
+.hotel-state {
+    margin: 1%;
 }

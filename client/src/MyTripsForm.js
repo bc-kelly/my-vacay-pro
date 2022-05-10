@@ -91,23 +91,23 @@ function MyTripsForm( {hotels, hotel}) {
                     <div className="div-one">  
                         <div className="form-rows" >
                             <label htmlFor="name"> </label>
-                            <input className="trip-form-input"  id="name" type="text" placeholder="Trip Name" />
+                            <input className="trip-form-input"  id="trip-name" type="text" placeholder="Trip Name" />
                         </div>
 
                         <div className="form-rows" >
                             <label htmlFor="date_start"></label>
-                            <input className="trip-form-input" id="date_start" type="date" placeholder="MM/DD/YYYY" />
+                            <input className="trip-form-input" id="trip-date_start" type="date" placeholder="MM/DD/YYYY" />
                         </div>
 
                         <div className="form-rows" >
                             <label htmlFor="date_end"></label>
-                            <input className="trip-form-input" id="date_end" type="date" placeholder="MM/DD/YYYY" />
+                            <input className="trip-form-input" id="trip-date_end" type="date" placeholder="MM/DD/YYYY" />
                         </div>
                     </div>
                     <div className="div-two">
                         <div className="form-rows" >
                             <label htmlFor="location"></label>
-                            <input className="trip-form-input" id="location" type="text" placeholder="Trip Location" />
+                            <input className="trip-form-input" id="trip-location" type="text" placeholder="Trip Location" />
                         </div> 
 
                         <div className="form-rows" >
@@ -115,13 +115,13 @@ function MyTripsForm( {hotels, hotel}) {
                             {/* <input className="trip-form-input" id="trip-txt-input" type="text" placeholder="profile_id" /> */}
                             <select 
                                 className="trip-form-input" 
-                                id="profile_id" 
+                                id="trip-profile_id" 
                                 type="text" 
                                 placeholder="profile_id" 
                                 onChange={handleChange}
                                 value={trips.profile_id}>
                                     <option    className="trip-form-input" 
-                                id="profile_id" > Select Profile </option>
+                                id="trip-profile_id" > Select Profile </option>
                                         {profiles.map(profile => (
                                         // console.log("User:", user)
                                         <option key={profile.id} value={profile.id}>
@@ -134,7 +134,7 @@ function MyTripsForm( {hotels, hotel}) {
                         <div className="form-rows" >
                             <label htmlFor="hotel_id"></label>
                             
-                            <input readonly value={hotel.id} className="trip-form-input" id="hotel_id"type="text" placeholder="hotel_id" />
+                            <input readonly value={hotel.id} className="trip-form-input" id="trip-hotel_id"type="text" placeholder="hotel_id" />
                         </div>
                     </div>
                 </div>

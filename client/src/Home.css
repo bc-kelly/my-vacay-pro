@@ -6,7 +6,7 @@
     outline: 2px solid #00FFFF;
     /* outline: 2px solid #f8ec83; */
     margin: 2% auto;
-    max-width: 60%;
+    max-width: 50%;
     border-radius: 10px;
     background-color: #363636;
     /* background-color: #9da0a3; */
@@ -16,7 +16,7 @@
 
 .home-title {
     font-size: 1.5em;
-    padding: 5%;
+    padding: 3%;
     color: white;
     font-family: Raleway;
 }

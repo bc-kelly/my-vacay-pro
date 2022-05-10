@@ -73,7 +73,7 @@ function AccountSummary({ hotelTrip}) {
                     {profileCard}
                 </div>
 
-                <div className="show-trips-header" > posted trips: </div>
+                <div className="show-trips-header" > Saved trips: </div>
 
                 <div className="account-summary-trip-card" > 
                     {/* {showAddedHotel} */}

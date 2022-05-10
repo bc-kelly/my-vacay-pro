@@ -17,8 +17,8 @@
     color: #363636;
 }
 
-input[class="form-input"]{
-    width: 35%;
+input[class="login-form-input"]{
+    /* width:35%; */
     height: 10%;
   
     margin-top: 2%;
@@ -63,7 +63,7 @@ input:focus {
     text-align: center;
     transition: all 0.2s linear;
     
-    margin: 7% auto;
+    margin: 4% auto;
     letter-spacing: 0.05em;
     font-size: .75em;
 }

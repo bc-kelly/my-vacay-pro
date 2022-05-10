@@ -25,10 +25,13 @@ function SendEmail() {
             .catch((err) => {
               console.log('FAILED...', err);
             });
+        alert ('your invite has been sent!')
+        e.target.reset();
       };
     
       const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
+        
       };
 
 
@@ -75,7 +78,7 @@ function SendEmail() {
                         id="reply_to"
                         type='text'
                         name='reply_to'
-                        placeholder='Your email'
+                        placeholder='Their email'
                         value={toSend.reply_to}
                         onChange={handleChange}
                     />

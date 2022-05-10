@@ -5,7 +5,6 @@
     background-color: white;
 }
 
-
 .form-rows {
     margin: 5px;
 }
@@ -19,38 +18,57 @@ input[class="trip-form-input"]{
     
     font-size: 16px;
     font-family: 'Abel', sans-serif;
-    color: #5E6472;
+    color: black;
   
-    outline: solid #f8ec83;
+    outline: solid #00ffff;
     border: none;
   
     border-radius: 5px 5px 5px 5px;
     transition: 0.2s linear;
+}
+
+input[id="trip-name"] {
+    width: 250px;
+    text-align: center;
     
 }
-input[id="name"] {
+input[id="trip-location"] {
     width: 250px;
     text-align: center;
 }
-input[id="location"] {
+input[id="trip-date_start"] {
     width: 250px;
     text-align: center;
 }
-input[id="date_start"] {
+input[id="trip-date_end"] {
     width: 250px;
     text-align: center;
 }
-input[id="date_end"] {
+input[id="trip-hotel_id"] {
     width: 250px;
     text-align: center;
 }
-input[id="hotel_id"] {
+input[id="trip-profile_id"] {
     width: 250px;
     text-align: center;
 }
-input[id="profile_id"] {
-    width: 250px;
-    text-align: center;
+
+select {
+    width: 100%;
+    height: 10%;
+
+    margin-top: 2%;
+    padding: 1%;
+
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: black;
+
+    outline: solid #00ffff;
+    border: none;
+
+    border-radius: 5px 5px 5px 5px;
+    transition: 0.2s linear;
 }
 /* focus  */
 input:focus {
@@ -66,7 +84,7 @@ input:focus {
     height: 50px;
   
     padding: 0 20px;
-    background: #f8ec83;
+    background: #00ffff;
     border-radius: 5px;
     
     outline: none;

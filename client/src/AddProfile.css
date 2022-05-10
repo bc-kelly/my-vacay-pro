@@ -20,7 +20,7 @@
 
 .add-profile-btn {
     display: inline-block;
-    color: #252537;
+    color: #363636;
   
     width: 220px;
     height: 60px;
@@ -38,6 +38,7 @@
     
     margin: 5% auto;
     letter-spacing: 0.05em;
+    font-size: 1.5em;
 }
 
 .add-rpofile-btn:hover {
@@ -67,7 +68,7 @@ input[class="form-input"]{
     
     font-size: 16px;
     font-family: 'Abel', sans-serif;
-    color: #5E6472;
+    color: #363636;
   
     outline: none;
     border: none;
@@ -79,10 +80,14 @@ input[class="form-input"]{
 input[id="name"] {
     width: 250px;
     text-align: center;
+    font-size: 1.5em;
+    color: #363636;
 }
 input[id="image"] {
     width: 250px;
     text-align: center;
+    font-size: 1.5em;
+    color: #363636;
 }
 /* focus  */
 input:focus {

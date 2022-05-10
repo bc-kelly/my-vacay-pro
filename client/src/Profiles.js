@@ -55,7 +55,7 @@ function Profiles() {
           </form> */}
             <div className="profile" >   
                 {/* {profileCard} */}
-                {profiles.length > 0 ? profileCard : <h1> Please create a profile </h1>}
+                {profiles.length > 0 ? profileCard : <h1 className="no-profile-message" > No profiles on this account, please click below to create your own! </h1>}
             </div>
 
             <div> 

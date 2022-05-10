@@ -44,7 +44,7 @@ function Browse({hotels, addHotelToTrip}) {
             <div> 
                 <input className="hotel-search" onChange={handleSearchText} value={searchText} id="search" type="text" placeholder="search by hotel name or location"></input>
             </div>
-            <div > 
+            <div className="browse-cards" > 
                 {/* {hotels.length > 0? showHotels : <h1> Nothing Here </h1>} */}
                 {showHotels}
                 {/* {hotelCard} */}

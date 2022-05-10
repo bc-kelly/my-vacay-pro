@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.no-profile-message {
+    font-family: 'Raleway';
+    margin: 5% auto;
+    color: white;
+}
+
 .profile {
     display: flex;
     /* margin: auto; */
@@ -14,11 +22,32 @@
     background-color: white;
 }
 
+.add-btn:hover {
+    background-color: #00ffff;
+}
+
+.add-btn:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+  }
+  
+  /* buttons hover Animation */
+  .add-btn:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+  }
+  @keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+  }
+
 .select-profile {
     margin: 10px;
 }
 
 .profile-dropdown {
     color: white;
- 
 }
