@@ -35,7 +35,7 @@ function LoginForm({ setUser }) {
         }).then((r) => {
         setIsLoading(false);
         if (r.ok) {
-            navigate("/browse");
+            // navigate("/browse");
             console.log('login success')
             Toast.fire({
                 icon: 'success',
@@ -44,6 +44,7 @@ function LoginForm({ setUser }) {
             // alert (`Welcome ${email}`)
             // console.log(setUser)
             r.json().then((user) => setUser(user));
+            navigate("/browse");
         } else {
             console.log('login failed')
             r.json().then((err) => setErrors(err.errors));

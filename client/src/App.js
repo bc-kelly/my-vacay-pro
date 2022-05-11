@@ -119,7 +119,7 @@ function App() {
               <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFAavqqFU4&#x2F;view?utm_content=DAFAavqqFU4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Summer Travel logo,palm tree and plane logo</a> by Bridget Kelly */}
           </div>
         {/* <div> Welcome {account.username} </div> */}
-        <NavBar />
+        <NavBar  user={user} setUser={setUser} />
             <Routes>
                   <Route exact path ="/" element= { <LogoPage /> } /> 
                   <Route path ="/home" element= { <Home setUser={setUser} /> } /> 
