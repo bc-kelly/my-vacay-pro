@@ -32,7 +32,6 @@ function MyTripsForm( {hotels, hotel}) {
         setTrips({
             ...trips,
             [event.target.name]: event.target.value,
-            
         });
     }
 

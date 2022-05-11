@@ -96,4 +96,11 @@ input:focus {
 }
 
 
+.image-div {
+    /* width: 65%; */
+    width: 40vh;
+    margin: auto;
+}
+
+
 
