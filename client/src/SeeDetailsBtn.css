@@ -9,7 +9,7 @@
     background: #00ffff;
     border-radius: 5px;
     
-    outline: none;
+    outline: 2px solid #00ffff;
     border: none;
   
     cursor: pointer;
@@ -23,6 +23,7 @@
 
 .see-details-btn:hover {
     background-color: #fff;
+    outline: 2px solid #00ffff;
 }
 
 .logout-btn:hover {

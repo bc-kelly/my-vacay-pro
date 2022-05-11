@@ -135,9 +135,9 @@ Account.create(account_name: "bridget", email:"bridget@gmail.com", password: "br
 
 puts "🌱 Creating profiles..."
 
-Profile.create(name: "Bridget", image: "https://cdn.costumewall.com/wp-content/uploads/2017/02/kim-possible.jpg", account_id: 1 )
-Profile.create(name: "Billy", image: "https://wallpapercave.com/wp/wp2616606.jpg", account_id: 1 )
-Profile.create(name: "Colin", image: "https://www.kindpng.com/picc/m/432-4326499_the-resemblance-is-uncanny-handsome-squidward-png-transparent.png", account_id: 1 )
+Profile.create(name: "Bridget", image: "https://i.pinimg.com/736x/7c/ee/6f/7cee6fa507169843e3430a90dd5377d4.jpg", account_id: 1 )
+Profile.create(name: "Billy", image: "https://i.pinimg.com/originals/99/a8/3e/99a83e22b4c160d36e1697b4139c803f.jpg", account_id: 1 )
+Profile.create(name: "Colin", image: "https://i.pinimg.com/originals/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg", account_id: 1 )
 
 
 puts "🌱 Creating hotels..."

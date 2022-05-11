@@ -6,12 +6,12 @@
     outline: 2px solid black;
     border-radius: 10px;
     height: 30vh;
-    width: 20vh;
+    width: 22vh;
     padding: 10px;
     background-color: white;
     margin: 2% auto;
     font-family: Raleway;
-    outline: 2px solid #00ffff;
+    /* outline: 2px solid #00ffff; */
 }
 
 .profile-image {

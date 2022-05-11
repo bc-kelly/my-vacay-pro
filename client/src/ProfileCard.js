@@ -11,6 +11,7 @@ function ProfileCard({profile}) {
     return (
         <div className="profile-card" > 
             <img className="profile-image" src={profile.image} alt={profile.name}/>
+            {/* <h3 className="profile-image" > {profile.image} </h3> */}
             <h3> {profile.name} </h3>
             {/* <div > 
                 <button className='edit'> 

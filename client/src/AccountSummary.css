@@ -20,7 +20,7 @@
 
 .account-summary-card .profile-card {
     height: 30vh;
-    width: 25vh;
+    width: 22vh;
     padding: 5px;
     margin: 1% auto;
 }
@@ -46,7 +46,9 @@
 
 .account-summary-trip-card {
     display: flex;
-    justify-content: center;    /* margin: auto; */
+    justify-content: center;
+    padding: 5%;
+    flex-wrap: wrap;
 }
 
 /* .profile-card {

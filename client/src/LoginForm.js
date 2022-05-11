@@ -8,7 +8,20 @@ function LoginForm({ setUser }) {
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const Swal = require('sweetalert2')
     let navigate = useNavigate();
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -24,7 +37,11 @@ function LoginForm({ setUser }) {
         if (r.ok) {
             navigate("/browse");
             console.log('login success')
-            alert (`Welcome ${email}`)
+            Toast.fire({
+                icon: 'success',
+                title: 'Signed in successfully'
+              })
+            // alert (`Welcome ${email}`)
             // console.log(setUser)
             r.json().then((user) => setUser(user));
         } else {

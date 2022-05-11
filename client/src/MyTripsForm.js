@@ -7,7 +7,7 @@ const profilesAPI = '/profiles';
 function MyTripsForm( {hotels, hotel}) {
 
     // let tripBooked = document.querySelector('#booked')
-
+    const Swal = require('sweetalert2')
     const [trips, setTrips] = useState([]);
     const [profiles, setProfiles] = useState([]);
     // const [formData, setFormData] = useState ({
@@ -48,6 +48,7 @@ function MyTripsForm( {hotels, hotel}) {
         .then(json => {
         setTrips([...trips, json])
         console.log(json)
+        
         })
         .catch(err => console.error(err))
     }
@@ -76,6 +77,22 @@ function MyTripsForm( {hotels, hotel}) {
         
         handleNewTrip(newTrip);
         console.log(newTrip)
+        Swal.fire({
+            title: 'Added Trip!',
+            // text: 'Do you want to continue',
+            icon: 'success',
+            timer: 1500,
+            confirmButtonText: 'Cool',
+            showConfirmButton: false
+          }).then(
+            function () {},
+            // handling the promise rejection
+            function (dismiss) {
+              if (dismiss === 'timer') {
+                //console.log('I was closed by the timer')
+              }
+            }
+          )
         // navigate("./profiles");
         // event.target.reset();
     }

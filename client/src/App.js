@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
+import LogoPage from "./LogoPage";
 import Home from "./Home";
 import Browse from "./Browse";
 import AccountSummary from "./AccountSummary";
@@ -12,7 +13,7 @@ import AddProfile from "./AddProfile";
 import MyTripsForm from "./MyTripsForm";
 import EditProfile from "./EditProfile";
 import SendEmail from "./SendEmail";
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 import './App.css';
 
 const hotelsAPI = '/hotels';
@@ -107,25 +108,41 @@ function App() {
 // console.log(profiles)
   return (
     <div className="App">
-      <button className="logout-btn" onClick = {handleLogoutClick} > Logout </button>
-     <NavBar />
-          <Routes>
-                <Route exact path ="/" element= { <Home setUser={setUser} /> } /> 
-                <Route path ="/browse" element= { <Browse hotels={hotels} addHotelToTrip={addHotelToTrip} /> } /> 
-                <Route path ="/accountsummary" element= { <AccountSummary 
-                // profiles={profiles} 
-                hotelTrip={hotelTrip} trips={trips} /> } />
-                <Route path ="/profiles" element= { <Profiles /> } /> 
-                <Route path ="/mytrips" element= { <MyTrips trips={trips} hotels={hotels} hotelTrip={hotelTrip} /> } /> 
-                <Route path ="/showhotel/:id" element= { <ShowHotel addHotelToTrip={addHotelToTrip} /> } />
-                <Route path ="/login" element= { <Login setUser={setUser} /> } />
-                <Route path ="/addprofile" element= { <AddProfile /> } />
-                <Route path ="/mytripsform" element= { <MyTripsForm hotels={hotels} 
-                // profiles={profiles} 
-                /> } />
-                <Route path ="/editprofile/:id" element= { <EditProfile /> } />
-                <Route path ="/sendemail" element= { <SendEmail /> } />
-          </Routes>
+      <div className="content-wrap">  
+        <div> 
+          <button className="logout-btn" onClick = {handleLogoutClick} > Logout </button>
+          {/* <div className="logo">
+                <iframe loading="lazy" className="next-logo"
+                  src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFAavqqFU4&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                </iframe>
+              </div>
+              <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFAavqqFU4&#x2F;view?utm_content=DAFAavqqFU4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Summer Travel logo,palm tree and plane logo</a> by Bridget Kelly */}
+          </div>
+        {/* <div> Welcome {account.username} </div> */}
+        <NavBar />
+            <Routes>
+                  <Route exact path ="/" element= { <LogoPage /> } /> 
+                  <Route path ="/home" element= { <Home setUser={setUser} /> } /> 
+                  <Route path ="/browse" element= { <Browse hotels={hotels} addHotelToTrip={addHotelToTrip} /> } /> 
+                  <Route path ="/accountsummary" element= { <AccountSummary 
+                  // profiles={profiles} 
+                  hotelTrip={hotelTrip} trips={trips} /> } />
+                  <Route path ="/profiles" element= { <Profiles /> } /> 
+                  <Route path ="/mytrips" element= { <MyTrips trips={trips} hotels={hotels} hotelTrip={hotelTrip} /> } /> 
+                  <Route path ="/showhotel/:id" element= { <ShowHotel addHotelToTrip={addHotelToTrip} /> } />
+                  <Route path ="/login" element= { <Login setUser={setUser} /> } />
+                  <Route path ="/addprofile" element= { <AddProfile /> } />
+                  <Route path ="/mytripsform" element= { <MyTripsForm hotels={hotels} 
+                  // profiles={profiles} 
+                  /> } />
+                  <Route path ="/editprofile/:id" element= { <EditProfile /> } />
+                  <Route path ="/sendemail" element= { <SendEmail /> } />
+            </Routes>
+            {/* <div class="diagonal-box">
+              <div class="content"> ... </div>
+            </div> */}
+      </div>
+        <footer class="footer"> Vacation Pro, plan those group trips </footer>
     </div>
   );
 }

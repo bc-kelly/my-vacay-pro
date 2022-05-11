@@ -4,6 +4,7 @@ import './SendEmail.css';
 
 function SendEmail() {
 
+    const Swal = require('sweetalert2')
     const [toSend, setToSend] = useState({
         from_name: '',
         to_name: '',
@@ -25,20 +26,34 @@ function SendEmail() {
             .catch((err) => {
               console.log('FAILED...', err);
             });
-        alert ('your invite has been sent!')
-        e.target.reset();
+            Swal.fire({
+                title: 'Email Sent!',
+                // text: 'Do you want to continue',
+                icon: 'success',
+                timer: 1500,
+                confirmButtonText: 'Cool',
+                showConfirmButton: false
+              }).then(
+                function () {},
+                // handling the promise rejection
+                function (dismiss) {
+                  if (dismiss === 'timer') {
+                    //console.log('I was closed by the timer')
+                  }
+                }
+              )
+            // e.target.reset();
       };
     
       const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
-        
       };
 
 
     return (
         <div className="send-email-div"  > 
             <h3 className="invite-header" >Invite a friend to join your account </h3>
-            <form onSubmit={onSubmit} className="send-email-form" >
+            <form onSubmit={onSubmit} className="send-email-form"  >
                 <div> 
                     <input
                         className="email-form-input"
@@ -83,7 +98,7 @@ function SendEmail() {
                         onChange={handleChange}
                     />
                 </div>
-                <button type='submit' className="submit-email-btn" > Submit </button> 
+                <button type='submit' className="submit-email-btn"> Submit </button> 
             </form>
         </div>
 

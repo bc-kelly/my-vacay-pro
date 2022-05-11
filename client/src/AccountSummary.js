@@ -48,7 +48,7 @@ function AccountSummary({ hotelTrip}) {
       }, [])
 
     const tripCard = trips.map(trip => {
-        console.log(trip.points)
+        // console.log(trip.points)
         return (
         <div> 
             <TripCard key={trip.id} trip={trip} />

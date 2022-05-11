@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
+import { BsFillFilePersonFill } from "react-icons/bs";
 import './AddProfile.css';
 
 const profilesAPI = '/profiles';
@@ -28,6 +29,7 @@ function AddProfile( ) {
         .then(response => response.json())
         .then(json => {
         setProfiles([...profiles, json])
+        //  navigate("/profiles");
         // console.log(json)
         })
         .catch(err => console.error(err))
@@ -70,13 +72,13 @@ function AddProfile( ) {
                                 value={profiles.image}
                                 onChange={handleChange}
                             >
-                                <option value="0"> Select a profile image </option>
-                                <option value="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/1d06a6bf1aefd96f5367d90923639ba156dd3f5f6452d0fdeaa6370d3fa025d2._SX1080_.jpg"> hey arnold </option>
-                                <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAs_TDUTeHiZQ1tqLJlvItaBOjcmRTeoSbHw&usqp=CAU"> shrek </option>
+                                <option value="0"> Select a profile icon </option>
+                                <option value="https://i.pinimg.com/originals/fd/b6/de/fdb6dea1b13458837c6e56361d2c2771.jpg"> orange </option>
+                                <option value="https://i.pinimg.com/originals/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg"> green </option>
                                 {/* <option value="https://static.more.com/wp-content/uploads/2016/11/10202508/hero_kimpossible_0-2-820x400.jpg"> kim possible </option> */}
-                                <option value="https://cdn.costumewall.com/wp-content/uploads/2017/02/kim-possible.jpg"> kim possible </option>
-                                <option value="https://wallpapercave.com/wp/wp2616606.jpg"> bart </option>
-                                <option value="https://www.kindpng.com/picc/m/432-4326499_the-resemblance-is-uncanny-handsome-squidward-png-transparent.png"> handsome squidward </option>
+                                <option value="https://i.pinimg.com/originals/99/a8/3e/99a83e22b4c160d36e1697b4139c803f.jpg"> yellow </option>
+                                <option value="https://i.pinimg.com/736x/7c/ee/6f/7cee6fa507169843e3430a90dd5377d4.jpg"> purple </option>
+                                <option value="https://i.pinimg.com/originals/bd/70/22/bd702201a2b6d8960734f60f34a22754.jpg"> pink </option>
                             </select>
                     </div>
 

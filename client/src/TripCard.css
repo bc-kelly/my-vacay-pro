@@ -16,3 +16,55 @@
 .profile-name {
     font-size: 1.5em;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.draft-btn {
+    display: inline-block;
+    color: #252537;
+  
+    width: 15vh;
+    height: 5vh;
+  
+    padding: 0 20px;
+    background: #00ffff;
+    border-radius: 5px;
+    
+    outline: none;
+    border: none;
+  
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    
+    margin: 1% auto;
+    letter-spacing: 0.05em;
+    font-size: .5em;
+    text-align: center;
+    font-family: Raleway;
+}
+
+.draft-btn:hover {
+    background-color: grey;
+}
+
+.draft-btn:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+.booked {
+    color: black;
+    /* background: #00ffff; */
+}
+
+.draft {
+    color: white;
+}

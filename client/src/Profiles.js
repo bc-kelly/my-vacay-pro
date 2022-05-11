@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import ProfileCard from './ProfileCard'
+import SendEmailBtn from './SendEmailBtn'
 import './Profiles.css';
 
 const profilesAPI = '/profiles';
@@ -53,6 +54,10 @@ function Profiles() {
             </select>
             </label>
           </form> */}
+            <div > 
+                <SendEmailBtn />
+            </div>
+            
             <div className="profile" >   
                 {/* {profileCard} */}
                 {profiles.length > 0 ? profileCard : <h1 className="no-profile-message" > No profiles on this account, please click below to create your own! </h1>}

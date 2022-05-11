@@ -5,6 +5,7 @@ import './TripCard.css'
 
 
 function TripCard( {trip}) {
+    const [show,setShow]=useState(true)
     // const params = useParams();
     // const tripsAPI = '/trips';
     // const [selectTrip, setSelectTrips] = useState(null);
@@ -55,6 +56,8 @@ function TripCard( {trip}) {
             {/* <div>
                 <input type="checkbox"  > </input>
             </div>  */}
+            
+           <button onClick={()=>setShow(!show)} className="draft-btn"> { show ? <h1 className="booked" >booked!</h1> : <h1 className="draft" >draft</h1>} </button> 
         </div>
 
     )
