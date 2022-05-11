@@ -11,6 +11,7 @@
     background-color: white;
     margin: 2% auto;
     font-family: Raleway;
+    outline: 2px solid #00ffff;
 }
 
 .profile-image {

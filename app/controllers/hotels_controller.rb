@@ -1,7 +1,7 @@
 class HotelsController < ApplicationController
 
     def index
-        hotels = Hotel.all
+        hotels = Hotel.all.order(:state)
         render json: hotels, status: :ok
     end
 

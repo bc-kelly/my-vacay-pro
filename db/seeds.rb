@@ -135,8 +135,9 @@ Account.create(account_name: "bridget", email:"bridget@gmail.com", password: "br
 
 puts "🌱 Creating profiles..."
 
-Profile.create(name: "profile1", image: "https://st4.depositphotos.com/1012074/25277/v/600/depositphotos_252773324-stock-illustration-young-avatar-face-with-sunglasses.jpg", account_id: 1 )
-Profile.create(name: "profile2", image: "https://st2.depositphotos.com/1007566/11574/v/950/depositphotos_115748664-stock-illustration-young-executive-woman-profile-icon.jpg", account_id: 1 )
+Profile.create(name: "Bridget", image: "https://cdn.costumewall.com/wp-content/uploads/2017/02/kim-possible.jpg", account_id: 1 )
+Profile.create(name: "Billy", image: "https://wallpapercave.com/wp/wp2616606.jpg", account_id: 1 )
+Profile.create(name: "Colin", image: "https://www.kindpng.com/picc/m/432-4326499_the-resemblance-is-uncanny-handsome-squidward-png-transparent.png", account_id: 1 )
 
 
 puts "🌱 Creating hotels..."
@@ -159,11 +160,34 @@ Hotel.create(name: "Horton Grand Hotel", city: "San Diego", state: "California",
 Hotel.create(name: "San Diego Marriott Del Mar", city: "San Diego", state: "California", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/215647589.webp?k=990def055760b81125bbc83f6c29d7b9a21cc43b4913456ebcfaa2a6864aac8c&o=&s=1")
 Hotel.create(name: "Bally's Las Vegas Hotel & Casino", city: "Las Vegas", state: "Nevada", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/130456384.webp?k=b8cf7d16bdf688ba5549c22ebe1a4b59484f2f9aa59fc88d1d42952c696133e2&o=&s=1")
 Hotel.create(name: "SAHARA Las Vegas", city: "Las Vegas", state: "Nevada", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/217008073.webp?k=2a97e849adb1d0a93a8ba23fe975dc8bc21598a1562587f1206e07b55102a5d4&o=&s=1")
-Hotel.create(name: "Mandarin Oriental Miami", city: "Miami", state: "Florida", tag: "https://t-cf.bstatic.com/xdata/images/hotel/square600/249509609.webp?k=aac942ccd5f6ee7dfe7b0857e1f8cd3868ec6faf3010e82a46fce5e4b390ac7d&o=&s=1")
+Hotel.create(name: "Fortune House Hotel Suites", city: "Miami", state: "Florida", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/46388234.webp?k=2b6da34b49586f64559d8152efca2efa740c37e8f7c3004b6b09e8aab0f8e080&o=&s=1")
+Hotel.create(name: "citizenM Miami Brickell", city: "Miami", state: "Florida", tag: "", image:"https://t-cf.bstatic.com/xdata/images/hotel/square600/347986682.webp?k=cfe81d4bfc16f5a45e58035c1a32f2ab2667041462bba927c4aecb830cfc1719&o=&s=1")
+Hotel.create(name: "Opal Key Resort & Marina", city: "Key West", state: "Florida", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/102404409.webp?k=8a25c410ba5fc68581b55f5ab62c8f9f634d50948e30c9461d087a3b6d62945f&o=&s=1")
+Hotel.create(name: "Oceans Edge Key West", city: "Key West", state: "Florida", tag: "", image:"https://t-cf.bstatic.com/xdata/images/hotel/square600/89926963.webp?k=75958c6ab961128d2f38da4d783d789198e61ab2499693ff37536856b48f75e4&o=&s=1")
 Hotel.create(name: "Hayes Street Hotel Nashville", city: "Nashville", state: "Tennessee", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/99411314.webp?k=59b9fe3bc941eb2f22ccb72449401a8796a436b2b2614b024a139fcd45e35dcd&o=&s=1")
 Hotel.create(name: "Hutton Hotel", city: "Nashville", state: "Tennessee", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/318874840.webp?k=f60954891e7e868b7bb15c60c0c34ebae1bbcd3084dc072d4eb251bacc71cc1c&o=&s=1")
+Hotel.create(name: "Sky Ranch Lodge", city: "Sedona", state: "Arizona", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/205396464.webp?k=0d877a5d247238f3230bf5e148f5d0d1c88d76b23c08155e7ae3bb19ec3e1d6d&o=&s=1")
+Hotel.create(name: "Amara Resort & Spa", city: "Sedona", state: "Arizona", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/19282903.webp?k=2a7ad36233f813562b2ff681100c7d4cc337e9c8c87ef85b8f9b03041eaecaf6&o=&s=1")
+Hotel.create(name: "Crowne Plaza Seattle", city: "Seattle", state: "Washington", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/235019355.webp?k=dfc608a7823b3544f81e25ce432f0d2d41837cbeb08936c127a7d2cacfd3dc72&o=&s=1")
+Hotel.create(name: "MarQueen Hotel", city: "Seattle", state: "Washington", tag: "historic", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/26193118.webp?k=976c0354518aa5b20ebe75905535c61e1e0a66bb1eabfbb7f70d49f6dc626a30&o=&s=1")
+Hotel.create(name: "The Heathman Hotel", city: "Portland", state: "Oregon", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/155528417.webp?k=a092ca2be609b22f4b74744d098d5af5a5777f81eeae467b22e89eee0937f2bd&o=&s=1")
+Hotel.create(name: "Embassy Suites Portland", city: "Portland", state: "Oregon", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/40712134.webp?k=432a8f7f2ecbc6bac235531587fdf2b87deb176b2f99ca3482441ee37b63e15e&o=&s=1")
+Hotel.create(name: "Four Seaasons St. Louis", city: "St. Louis", state: "Missouri", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/255993925.webp?k=b8e9cc8095709a2448af1d456d4a577680c19e7531d8a887460ae995f67c2555&o=&s=1")
+Hotel.create(name: "East Austin Hotel", city: "Austin", state: "Texas", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/333974632.webp?k=130f1e24e94c0f35d64e53dcadba33e341433aa9d6a6108fa114be1f37c26685&o=&s=1")
+Hotel.create(name: "Riverwalk Plaza Hotel", city: "San Antonio", state: "Texas", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/194747941.webp?k=f578d2069190619bbd4df63825026c6a8478ce39250f0ae61f200bb5a8d4a018&o=&s=1")
+Hotel.create(name: "Sonesta Resort", city: "Hilton Head Island", state: "South Carolina", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/252679078.webp?k=91b142dc7e78a044c8dac75f0a93c18b62614d02e4a28fbd058a2aca233939b8&o=&s=1")
+Hotel.create(name: "Millennium Minneapolis", city: "Minneapolis", state: "Minnesota", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/17880463.webp?k=dd3479ab3c08d05690346b426fda7be406083dbbad18344a4866fffe7088995d&o=&s=1")
+Hotel.create(name: "The Westin Minneapolis", city: "Minneapolis", state: "Minnesota", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/28911967.webp?k=eccd5b6d201607cf230ff4ad93ff8232a0f5020317b06baff6faa0b482bc1aef&o=&s=1")
+Hotel.create(name: "The Newport Harbor Hotel & Marina", city: "Newport", state: "Rhode Island", tag: "", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/22905134.webp?k=bc8798849489d4446f009cba65513cd4bdf8fa76ed50f5cbcb5a3ba6fba5f4a0&o=&s=1")
+Hotel.create(name: "Hotel Viking", city: "Newport", state: "Rhode Island", tag: "historic", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/76760095.webp?k=46558af030428b05366aa01762ec2dca8bae774b13ee8457edf876704a6adcd8&o=&s=1")
+Hotel.create(name: "Grand Hyatt Vail", city: "Vail", state: "Colorado", tag: "adventure", image: "https://t-cf.bstatic.com/xdata/images/hotel/square600/293193649.webp?k=ba0d62b1ad124190b6ad069338d35db2ea6d668d81ab8bd41d8af854ddff33ea&o=&s=1")
+
+
+
 
 puts "🌱 Creating trips..."
-Trip.create(name: "Girls Trip", location: "NYC", date_start: "05/15/2022", date_end: "06/15/2022", points: 100, profile_id: 1, hotel_id: 1, booked: false, account_id: 1)
+Trip.create(name: "Girls Trip", location: "NYC", date_start: "05/15/2022", date_end: "05/25/2022", profile_id: 1, hotel_id: 12, booked: false, account_id: 1)
+Trip.create(name: "Bach Party", location: "Nashville", date_start: "07/10/2022", date_end: "07/15/2022", profile_id: 2, hotel_id: 23, booked: false, account_id: 1)
+Trip.create(name: "Ski Vacay", location: "Colorado", date_start: "12/17/2022", date_end: "12/24/2022", profile_id: 3, hotel_id: 39, booked: false, account_id: 1)
 
 puts "Done seeding!" 
