@@ -1,5 +1,5 @@
 class Account < ApplicationRecord
-    has_many :profiles
+    has_many :profiles, dependent: :destroy
     has_many :trips, through: :profiles
 
     has_secure_password
