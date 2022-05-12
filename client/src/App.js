@@ -81,14 +81,13 @@ function App() {
           // text: 'Do you want to continue',
           icon: 'success',
           timer: 1500,
-          confirmButtonText: 'Cool',
+          // confirmButtonText: 'Cool',
           showConfirmButton: false
         }).then(
           function () {},
           // handling the promise rejection
           function (dismiss) {
             if (dismiss === 'timer') {
-              //console.log('I was closed by the timer')
             }
           }
         )
