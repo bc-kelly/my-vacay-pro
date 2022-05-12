@@ -142,7 +142,7 @@ function App() {
               <div class="content"> ... </div>
             </div> */}
       </div>
-        <footer class="footer"> Vacation Pro, plan those group trips </footer>
+        <footer className="footer"> Vacation Pro, plan those group trips </footer>
     </div>
   );
 }

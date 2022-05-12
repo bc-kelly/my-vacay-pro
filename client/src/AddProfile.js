@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-import { BsFillFilePersonFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 import './AddProfile.css';
 
 const profilesAPI = '/profiles';
 
 function AddProfile( ) {
 
-    // let navigate = useNavigate();
+    let navigate = useNavigate();
     const [profiles, setProfiles] = useState([]);
-    // const imageOne = ("https://image.pngaaa.com/975/4080975-middle.png")
 
     function handleChange(event) {
         setProfiles({
@@ -26,11 +24,15 @@ function AddProfile( ) {
         },
         body: JSON.stringify(profile),
         })
-        .then(response => response.json())
+        .then(response => {
+            console.log(response)
+            response.json()
+        })
+
         .then(json => {
-        setProfiles([...profiles, json])
-        //  navigate("/profiles");
-        // console.log(json)
+        // setProfiles([...profiles, json])
+         navigate("/profiles");
+        console.log(json)
         })
         .catch(err => console.error(err))
     }

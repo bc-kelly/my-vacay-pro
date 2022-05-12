@@ -4,6 +4,7 @@ class ProfilesController < ApplicationController
         profile = Profile.new(profile_params)
         profile.account_id = session[:account_id]
         profile.save
+        render json: profile
       end
     
       def show
