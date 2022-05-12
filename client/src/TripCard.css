@@ -66,5 +66,6 @@
 }
 
 .draft {
-    color: white;
+    color: blue;
+    font-weight: bolder;
 }

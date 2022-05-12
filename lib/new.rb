@@ -2,19 +2,18 @@ require 'nokogiri'
 require 'open-uri'
 require 'pry'
 # require 'csv'
-
 def create_project_hash
-  kickstarter = Nokogiri::HTML(URI.open("https://en.wikipedia.org/wiki/List_of_hotels_in_the_United_States"))
+  kickstarter = Nokogiri::HTML(URI.open("https://www.booking.com/hotel/us/east-austin.html?aid=309654&label=hotels-english-en-caus-sYluq0q935aXuqlDOHhA%2AAS166194690220%3Apl%3Ata%3Ap1%3Ap22%2C563%2C000%3Aac%3Aap%3Aneg%3Afi%3Atikwd-298016546864%3Alp9067609%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcsZ-Id2vkzIfTmYhvC5HOg&sid=fd05246afd3f6d315b8f2ce0b1081a92&dest_id=20126394;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1652307354;srpvid=0f8b9c8c38d20217;type=total;ucfs=1&#hotelTmpl"))
   projects = []
   # list = kickstarter.search('div').css('.fcab3ed991')
 
   # list = kickstarter.css('.gallerytext')
   # p list.length
 
-  kickstarter.css(".gallerybox").each do |project|
+  kickstarter.css(".bui-grid__column bui-grid__column-12 js-k2-hp--block k2-hp--popular_facilities").each do |project|
     projects << {
-      :title => project.css(".gallerytext").text,
-      :image => project.css(".thumb").css("img").attribute("src").value
+      :title => project.css(".important_facility").text,
+      # :image => project.css(".thumb").css("img").attribute("src").value
     }
   end
   projects
@@ -26,7 +25,31 @@ def create_project_hash
 #   end
 end
 create_project_hash()
+# this worked before starting line 29
+# def create_project_hash
+#   kickstarter = Nokogiri::HTML(URI.open("https://en.wikipedia.org/wiki/List_of_hotels_in_the_United_States"))
+#   projects = []
+#   # list = kickstarter.search('div').css('.fcab3ed991')
 
+#   # list = kickstarter.css('.gallerytext')
+#   # p list.length
+
+#   kickstarter.css(".gallerybox").each do |project|
+#     projects << {
+#       :title => project.css(".gallerytext").text,
+#       :image => project.css(".thumb").css("img").attribute("src").value
+#     }
+#   end
+#   projects
+#   binding.pry
+# #   CSV.open("myfiletest2.csv", "w") do |csv|
+# #     projects.each do |project|
+# #       csv << [project[:title], project[:image2]]
+# #     end
+# #   end
+# end
+# create_project_hash()
+# this worked ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 # require 'nokogiri'
 # require 'open-uri'
